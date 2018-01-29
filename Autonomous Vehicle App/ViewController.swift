@@ -16,6 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var menuButton3: UIBarButtonItem?
     @IBOutlet var mapView: MKMapView?
     
+    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -75,6 +76,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView?.addAnnotation(jmuFestivalLocationPin)
         mapView?.addAnnotation(jmuMadisonUnionLocationPin)
         mapView?.addAnnotation(jmuQuadLocationPin)
+    }
+    
+    func cutOffAlert() {
+        let alert = UIAlertController(title: "Cut off vehicle power?", message: "Are you sure you wish to cut off vehicle power?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+        
     }
     
     func googleMapsTest() {
