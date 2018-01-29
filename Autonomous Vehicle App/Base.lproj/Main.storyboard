@@ -42,6 +42,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="cutOffButton3:" destination="XCw-wA-gyC" eventType="touchUpInside" id="xy4-vN-oRC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,6 +105,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="cutOffButton2:" destination="Wcj-3Z-mVP" eventType="touchUpInside" id="03i-WZ-V2I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -653,6 +659,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="cutOffButton1:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="6Cu-OC-Bsa"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FdA-vG-zLW">
                                 <rect key="frame" x="0.0" y="64" width="320" height="56"/>
@@ -682,6 +691,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
+                                            <action selector="goToButton1:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="IHR-Dv-nyf"/>
                                             <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="WY3-aS-egq"/>
                                         </connections>
                                     </button>
@@ -704,6 +714,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
+                                            <action selector="goToButton2:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="E9B-o2-J8k"/>
                                             <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="PCQ-uO-htv"/>
                                         </connections>
                                     </button>
@@ -726,6 +737,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
+                                            <action selector="goToButton3:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="8Or-ku-wKM"/>
                                             <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="3uv-BB-p0L"/>
                                         </connections>
                                     </button>
@@ -748,6 +760,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
+                                            <action selector="goToButton4:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="HaM-XQ-tPC"/>
                                             <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="OwY-AA-dMv"/>
                                         </connections>
                                     </button>
@@ -808,6 +821,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="eBg-cG-El8"/>
         <segue reference="iKA-Kg-Qpz"/>
-        <segue reference="3uv-BB-p0L"/>
+        <segue reference="ePG-mV-wov"/>
     </inferredMetricsTieBreakers>
 </document>

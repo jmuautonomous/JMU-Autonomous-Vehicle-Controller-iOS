@@ -51,6 +51,34 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Dispose of any resources that can be recreated.
     }
     
+    //Cut Off button onClick functions
+    @IBAction func cutOffButton1(_ sender: UIButton) {
+        cutOffAlert()
+    }
+    @IBAction func cutOffButton2(_ sender: UIButton) {
+        cutOffAlert()
+    }
+    @IBAction func cutOffButton3(_ sender: UIButton) {
+        cutOffAlert()
+    }
+    
+    //Go to button onClick functions
+    @IBAction func goToButton1(_ sender: UIButton) {
+        goAlert()
+    }
+    @IBAction func goToButton2(_ sender: UIButton) {
+        goAlert()
+    }
+    @IBAction func goToButton3(_ sender: UIButton) {
+        goAlert()
+    }
+    @IBAction func goToButton4(_ sender: UIButton) {
+        goAlert()
+    }
+    
+    
+    
+    
     //function that controls map
     func xlabsMapView() {
         //distanceSpan = ~map altitude
@@ -78,6 +106,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView?.addAnnotation(jmuQuadLocationPin)
     }
     
+    //function that displays cut off alert
     func cutOffAlert() {
         let alert = UIAlertController(title: "Cut off vehicle power?", message: "Are you sure you wish to cut off vehicle power?", preferredStyle: .alert)
         
@@ -87,6 +116,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.present(alert, animated: true)
         
     }
+    
+    //function that displays go to alert
+    func goAlert() {
+        let alert = UIAlertController(title: "Go to this destination?", message: "The vehicle will drive itself to your chosen destination", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Go", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+        }
     
     func googleMapsTest() {
         // Create a GMSCameraPosition that tells the map to display the
