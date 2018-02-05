@@ -36,18 +36,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             locationManager.startUpdatingLocation()
         }
         
-        //print(getDataForID(ID: "1"))
-        
-        //let sourceCoordinates = locationManager.location?.coordinate
-        
         //loading functions
-        //googleMapsTest()
         sideMenus()
         customizeNavBar()
         onLoadMapView()
-        
+        //googleMapsTest()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,16 +61,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     //Go to button onClick functions
     @IBAction func goToButton1(_ sender: UIButton) {
-        goAlert()
+        goAlert(buttonNo: 1)
     }
     @IBAction func goToButton2(_ sender: UIButton) {
-        goAlert()
+        goAlert(buttonNo: 2)
     }
     @IBAction func goToButton3(_ sender: UIButton) {
-        goAlert()
+        goAlert(buttonNo: 3)
     }
     @IBAction func goToButton4(_ sender: UIButton) {
-        goAlert()
+        goAlert(buttonNo: 4)
     }
     
     /*func getSwiftArrayFromPlist(name: String)->(Array<Dictionary<String,String>>) {
@@ -91,16 +86,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return [array.filter {namePredicate.evaluate(with: $0)}[0]]
     }*/
     
+    // jmu*Location = various coordinates of JMU POIs
+    let jmuXlabsLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.431928, -78.875965)
+    let jmuFestivalLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.432766, -78.859402)
+    let jmuMadisonUnionLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.437708, -78.870807)
+    let jmuQuadLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.438833, -78.874412)
+    
     //function that controls map annotations
     func onLoadMapView() {
         //distanceSpan = ~map altitude
         let distanceSpan:CLLocationDegrees = 500
-        
-        // jmu*Location = various coordinates of JMU POIs
-        let jmuXlabsLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.431928, -78.875965)
-        let jmuFestivalLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.432766, -78.859402)
-        let jmuMadisonUnionLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.437708, -78.870807)
-        let jmuQuadLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(38.438833, -78.874412)
         
         //jmu*Pin = location pins that will be placed on the map
         let jmuXlabsLocationPin = MapAnnotation(title: "JMU X-Labs", subtitle: "Lakeview Hall 1150", coordinate: jmuXlabsLocation)
@@ -116,10 +111,28 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView?.addAnnotation(jmuFestivalLocationPin)
         mapView?.addAnnotation(jmuMadisonUnionLocationPin)
         mapView?.addAnnotation(jmuQuadLocationPin)
-        
-        //controls display of directions between user location and POI
+    }
+    
+    //function that controls the display of directions between user location and POI
+    func mapPolylineView(buttonNo: NSNumber) {
         let sourceCoordinates = locationManager.location?.coordinate
-        let destCoordinates = jmuFestivalLocation
+        var destCoordinates = jmuFestivalLocation
+        
+        if buttonNo == 1 {
+            destCoordinates = jmuXlabsLocation
+            print("go to xlabs")
+        } else if buttonNo == 2 {
+            destCoordinates = jmuFestivalLocation
+            print("go to festi")
+        } else if buttonNo == 3 {
+            destCoordinates = jmuMadisonUnionLocation
+            print("go to mu")
+        } else if buttonNo == 4 {
+            destCoordinates = jmuQuadLocation
+            print("go to quad")
+        }
+        
+        print(destCoordinates)
         
         let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
         let destPlacemark = MKPlacemark(coordinate: destCoordinates)
@@ -136,7 +149,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         directions.calculate(completionHandler: {
             response, error in
             guard let response = response else {
-                if let error = error {
+                if error != nil {
                     print("Something went wrong")
                 }
                 return
@@ -163,7 +176,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func cutOffAlert() {
         let alert = UIAlertController(title: "Cut off vehicle power?", message: "Are you sure you wish to cut off vehicle power?", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            //code that cuts off car's power
+        }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
@@ -171,10 +186,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     //function that displays go to alert
-    func goAlert() {
+    func goAlert(buttonNo: NSNumber) {
         let alert = UIAlertController(title: "Go to this destination?", message: "The vehicle will drive itself to your chosen destination", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Go", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Go", style: .default, handler: { (action) in
+            if buttonNo == 1 {
+                self.mapPolylineView(buttonNo: 1)
+            } else if buttonNo == 2 {
+                self.mapPolylineView(buttonNo: 2)
+            } else if buttonNo == 3 {
+                self.mapPolylineView(buttonNo: 3)
+            } else if buttonNo == 4 {
+                self.mapPolylineView(buttonNo: 4)
+            }
+            //alert.dismiss(animated: true, completion: nil)
+        }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
@@ -195,22 +221,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         jmuXlabsLocationMarker.map = gmapView
         
         let jmuFestivalLocationMarker = GMSMarker()
-        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.432766, longitude: -78.859402)
-        jmuXlabsLocationMarker.title = "Festival"
-        jmuXlabsLocationMarker.snippet = "Festival Conference Center"
-        jmuXlabsLocationMarker.map = gmapView
+        jmuFestivalLocationMarker.position = CLLocationCoordinate2D(latitude: 38.432766, longitude: -78.859402)
+        jmuFestivalLocationMarker.title = "Festival"
+        jmuFestivalLocationMarker.snippet = "Festival Conference Center"
+        jmuFestivalLocationMarker.map = gmapView
         
         let jmuMadisonUnionLocationMarker = GMSMarker()
-        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.437708, longitude: -78.870807)
-        jmuXlabsLocationMarker.title = "Madison Union"
-        jmuXlabsLocationMarker.snippet = "Madison Union"
-        jmuXlabsLocationMarker.map = gmapView
+        jmuMadisonUnionLocationMarker.position = CLLocationCoordinate2D(latitude: 38.437708, longitude: -78.870807)
+        jmuMadisonUnionLocationMarker.title = "Madison Union"
+        jmuMadisonUnionLocationMarker.snippet = "Madison Union"
+        jmuMadisonUnionLocationMarker.map = gmapView
         
         let jmuQuadLocationMarker = GMSMarker()
-        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.438833, longitude: -78.874412)
-        jmuXlabsLocationMarker.title = "The Quad"
-        jmuXlabsLocationMarker.snippet = "The Quad"
-        jmuXlabsLocationMarker.map = gmapView
+        jmuQuadLocationMarker.position = CLLocationCoordinate2D(latitude: 38.438833, longitude: -78.874412)
+        jmuQuadLocationMarker.title = "The Quad"
+        jmuQuadLocationMarker.snippet = "The Quad"
+        jmuQuadLocationMarker.map = gmapView
     }
     
     //function that control side menu interaction
@@ -252,5 +278,4 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //bar text colour
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
-
 }
