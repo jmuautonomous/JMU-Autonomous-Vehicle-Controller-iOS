@@ -36,13 +36,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             locationManager.startUpdatingLocation()
         }
         
+        //print(getDataForID(ID: "1"))
+        
         //let sourceCoordinates = locationManager.location?.coordinate
         
         //loading functions
         //googleMapsTest()
         sideMenus()
         customizeNavBar()
-        xlabsMapView()
+        onLoadMapView()
         
     }
 
@@ -76,11 +78,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         goAlert()
     }
     
+    /*func getSwiftArrayFromPlist(name: String)->(Array<Dictionary<String,String>>) {
+        let path = Bundle.main.path(forResource: name, ofType: "plist")
+        var arr : NSArray?
+        arr = NSArray(contentsOfFile: path!)
+        return (arr as? Array<Dictionary<String,String>>)!
+    }
     
+    func getDataForID(ID: String)->(Array<[String:String]>) {
+        let array = getSwiftArrayFromPlist(name: "path_isat_to_lakeview")
+        let namePredicate = NSPredicate(format: "ID = %@", ID)
+        return [array.filter {namePredicate.evaluate(with: $0)}[0]]
+    }*/
     
-    
-    //function that controls map
-    func xlabsMapView() {
+    //function that controls map annotations
+    func onLoadMapView() {
         //distanceSpan = ~map altitude
         let distanceSpan:CLLocationDegrees = 500
         
@@ -104,6 +116,47 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView?.addAnnotation(jmuFestivalLocationPin)
         mapView?.addAnnotation(jmuMadisonUnionLocationPin)
         mapView?.addAnnotation(jmuQuadLocationPin)
+        
+        //controls display of directions between user location and POI
+        let sourceCoordinates = locationManager.location?.coordinate
+        let destCoordinates = jmuFestivalLocation
+        
+        let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
+        let destPlacemark = MKPlacemark(coordinate: destCoordinates)
+        
+        let sourceItem = MKMapItem(placemark: sourcePlacemark)
+        let destItem = MKMapItem(placemark: destPlacemark)
+        
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sourceItem
+        directionRequest.destination = destItem
+        directionRequest.transportType = .walking
+        
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate(completionHandler: {
+            response, error in
+            guard let response = response else {
+                if let error = error {
+                    print("Something went wrong")
+                }
+                return
+            }
+            
+            let route = response.routes[0]
+            self.mapView?.add(route.polyline, level: .aboveRoads)
+            
+            let rekt = route.polyline.boundingMapRect
+            self.mapView?.setRegion(MKCoordinateRegionForMapRect(rekt), animated: true)
+        })
+    }
+    
+    //function that displays polyline between user location and POI
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor(displayP3Red: 69/255, green: 0/255, blue: 132/255, alpha: 1)
+        renderer.lineWidth = 5.0
+        
+        return renderer
     }
     
     //function that displays cut off alert
@@ -129,17 +182,35 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func googleMapsTest() {
         // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        // coordinate 38.431928,-78.875965 at zoom level 6.
+        let camera = GMSCameraPosition.camera(withLatitude: 38.431928, longitude: -78.875965, zoom: 6.0)
         let gmapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = gmapView
         
         // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = gmapView
+        let jmuXlabsLocationMarker = GMSMarker()
+        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.431928, longitude: -78.875965)
+        jmuXlabsLocationMarker.title = "JMU X-Labs"
+        jmuXlabsLocationMarker.snippet = "Lakeview Hall 1150"
+        jmuXlabsLocationMarker.map = gmapView
+        
+        let jmuFestivalLocationMarker = GMSMarker()
+        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.432766, longitude: -78.859402)
+        jmuXlabsLocationMarker.title = "Festival"
+        jmuXlabsLocationMarker.snippet = "Festival Conference Center"
+        jmuXlabsLocationMarker.map = gmapView
+        
+        let jmuMadisonUnionLocationMarker = GMSMarker()
+        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.437708, longitude: -78.870807)
+        jmuXlabsLocationMarker.title = "Madison Union"
+        jmuXlabsLocationMarker.snippet = "Madison Union"
+        jmuXlabsLocationMarker.map = gmapView
+        
+        let jmuQuadLocationMarker = GMSMarker()
+        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.438833, longitude: -78.874412)
+        jmuXlabsLocationMarker.title = "The Quad"
+        jmuXlabsLocationMarker.snippet = "The Quad"
+        jmuXlabsLocationMarker.map = gmapView
     }
     
     //function that control side menu interaction

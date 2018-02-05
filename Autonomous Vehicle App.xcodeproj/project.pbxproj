@@ -12,6 +12,7 @@
 		D203AA9B2018F061005BF025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203AA9A2018F061005BF025 /* ViewController.swift */; };
 		D203AAA12018FC1C005BF025 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D203AAA02018FC1C005BF025 /* SWRevealViewController.m */; };
 		D20F6A6020184C5100CBC1F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20F6A5F20184C5100CBC1F1 /* MapKit.framework */; };
+		D2117CCB2028DC34005B2239 /* path_isat_to_lakeview.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2117CCA2028DC34005B2239 /* path_isat_to_lakeview.plist */; };
 		D2BC5AF22018197800CC11DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC5AF12018197800CC11DE /* AppDelegate.swift */; };
 		D2BC5AF92018197800CC11DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BC5AF72018197800CC11DE /* Main.storyboard */; };
 		D2BC5AFB2018197800CC11DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BC5AFA2018197800CC11DE /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		D203AAA02018FC1C005BF025 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D20F6A5F20184C5100CBC1F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D20F6A6120184C6300CBC1F1 /* Autonomous Vehicle App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Autonomous Vehicle App.entitlements"; sourceTree = "<group>"; };
+		D2117CCA2028DC34005B2239 /* path_isat_to_lakeview.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = path_isat_to_lakeview.plist; sourceTree = "<group>"; };
 		D214EEA92018E46200985594 /* Autonomous Vehicle App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autonomous Vehicle App-Bridging-Header.h"; sourceTree = "<group>"; };
 		D2BC5AEE2018197800CC11DE /* Autonomous Vehicle App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autonomous Vehicle App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC5AF12018197800CC11DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				D203AA9F2018FC1C005BF025 /* SWRevealViewController.h */,
 				D203AAA02018FC1C005BF025 /* SWRevealViewController.m */,
 				D2FD9CC7201EBBC1007CBDBF /* gmaps-api-key.txt */,
+				D2117CCA2028DC34005B2239 /* path_isat_to_lakeview.plist */,
 			);
 			path = "Autonomous Vehicle App";
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				D2BC5AFE2018197800CC11DE /* LaunchScreen.storyboard in Resources */,
 				D2BC5AFB2018197800CC11DE /* Assets.xcassets in Resources */,
 				D2BC5AF92018197800CC11DE /* Main.storyboard in Resources */,
+				D2117CCB2028DC34005B2239 /* path_isat_to_lakeview.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +387,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Autonomous Vehicle App/Pods-Autonomous Vehicle App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CSVImporter/CSVImporter.framework",
+				"${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSVImporter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandySwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
