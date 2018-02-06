@@ -10,4 +10,4 @@
 		<img src="https://img.shields.io/badge/release-0.0.0-blue.svg" alt="GitHub release">
 	</a>
 </p>
-A mobile application used to monitor vehicle sensors and select the destination to which the car will drive itself
+A mobile application used to monitor James Madison University's autonomous vehicle's sensors and select the destination to which the car will drive itself
