@@ -45,6 +45,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         customizeNavBar()
         onLoadMapView()
         //googleMapsTest()
+        //mapPolylineView(buttonNo: 2)
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,6 +63,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBAction func cutOffButton3(_ sender: UIButton) {
         cutOffAlert()
     }
+    
     
     //Go to button onClick functions
     @IBAction func goToButton1(_ sender: UIButton) {
