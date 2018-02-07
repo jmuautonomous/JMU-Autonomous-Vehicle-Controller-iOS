@@ -1,0 +1,6 @@
+framework module Pods_Autonomous_Vehicle_AppTests {
+  umbrella header "Pods-Autonomous Vehicle AppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

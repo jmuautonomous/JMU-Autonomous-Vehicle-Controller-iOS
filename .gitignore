@@ -21,8 +21,5 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-Podfile.lock
-Pods
-Podfile
 .DS_Store
 /Autonomous\ Vehicle\ App/gmaps-api-key.txt
