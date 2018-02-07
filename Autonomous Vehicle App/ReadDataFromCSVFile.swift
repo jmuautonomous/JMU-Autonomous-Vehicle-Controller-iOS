@@ -2,7 +2,7 @@
 //  readCSVFile.swift
 //  Autonomous Vehicle App
 //
-//  Created by tns_lab on 2/6/18.
+//  Created by Ben Gilliam, JMU '18 on 2/6/18.
 //
 
 import Foundation
@@ -28,8 +28,6 @@ class ReadDataFromCSVFile {
         var cleanFile = file
         cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
         cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
-        //        cleanFile = cleanFile.replacingOccurrences(of: ";;", with: "")
-        //        cleanFile = cleanFile.replacingOccurrences(of: ";\n", with: "")
         return cleanFile
     }
     

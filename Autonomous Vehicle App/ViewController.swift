@@ -64,7 +64,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         cutOffAlert()
     }
     
-    
     //Go to button onClick functions
     @IBAction func goToButton1(_ sender: UIButton) {
         goAlert(buttonNo: 1)
@@ -80,58 +79,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         goAlert(buttonNo: 4)
     }
     
-    /*func getSwiftArrayFromPlist(name: String)->(Array<Dictionary<String,String>>) {
-        let path = Bundle.main.path(forResource: name, ofType: "plist")
-        var arr : NSArray?
-        arr = NSArray(contentsOfFile: path!)
-        return (arr as? Array<Dictionary<String,String>>)!
-    }
-    
-    func getDataForID(ID: String)->(Array<[String:String]>) {
-        let array = getSwiftArrayFromPlist(name: "path_isat_to_lakeview")
-        let namePredicate = NSPredicate(format: "ID = %@", ID)
-        return [array.filter {namePredicate.evaluate(with: $0)}[0]]
-    }*/
-    
-    //CSV stuff
-    func readDataFromCSV(fileName:String, fileType: String)-> String!{
-        guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
-            else {
-                return nil
-        }
-        do {
-            var contents = try String(contentsOfFile: filepath, encoding: .utf8)
-            contents = cleanRows(file: contents)
-            return contents
-        } catch {
-            print("File Read Error for file \(filepath)")
-            return nil
-        }
-    }
-    
-    func cleanRows(file:String)->String{
-        var cleanFile = file
-        cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
-        cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
-        //        cleanFile = cleanFile.replacingOccurrences(of: ";;", with: "")
-        //        cleanFile = cleanFile.replacingOccurrences(of: ";\n", with: "")
-        return cleanFile
-    }
-    
-    func csv(data: String) -> [[String]] {
-        var result: [[String]] = []
-        let rows = data.components(separatedBy: "\n")
-        for row in rows {
-            let columns = row.components(separatedBy: ";")
-            result.append(columns)
-        }
-        return result
-    }
-    
+    //function to import CVS data
     func printCSVValues() {
-        var data = readDataFromCSV(fileName: "path_isat_to_lakeview", fileType: "csv")
-        data = cleanRows(file: data!)
-        let csvRows = csv(data: data!)
+        var data = ReadDataFromCSVFile().readDataFromCSV(fileName: "path_isat_to_lakeview", fileType: "csv")
+        data = ReadDataFromCSVFile().cleanRows(file: data!)
+        let csvRows = ReadDataFromCSVFile().csv(data: data!)
         print(csvRows[1][0])
     }
     
