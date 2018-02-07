@@ -11,9 +11,8 @@ import GoogleMaps
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    @IBOutlet weak var menuButton1: UIBarButtonItem?
-    @IBOutlet weak var menuButton2: UIBarButtonItem?
-    @IBOutlet weak var menuButton3: UIBarButtonItem?
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem?
     @IBOutlet var mapView: MKMapView?
     @IBOutlet weak var ScrollView: UIScrollView!
     
@@ -54,15 +53,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     //Cut Off button onClick functions
-    @IBAction func cutOffButton1(_ sender: UIButton) {
+    @IBAction func cutOffButton(_ sender: UIButton) {
         cutOffAlert()
     }
-    @IBAction func cutOffButton2(_ sender: UIButton) {
-        cutOffAlert()
-    }
-    @IBAction func cutOffButton3(_ sender: UIButton) {
-        cutOffAlert()
-    }
+    
     
     //Go to button onClick functions
     @IBAction func goToButton1(_ sender: UIButton) {
@@ -244,24 +238,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func sideMenus() {
         
         if revealViewController() != nil {
-            menuButton1?.target = revealViewController()
-            menuButton1?.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rearViewRevealWidth = 275
-            
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
-        if revealViewController() != nil {
-            menuButton2?.target = revealViewController()
-            menuButton2?.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rearViewRevealWidth = 275
-            
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
-        if revealViewController() != nil {
-            menuButton3?.target = revealViewController()
-            menuButton3?.action = #selector(SWRevealViewController.revealToggle(_:))
+            menuButton?.target = revealViewController()
+            menuButton?.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
