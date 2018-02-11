@@ -253,7 +253,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         navigationController?.navigationBar.tintColor = UIColor.white
         
         //bar background colour
-        navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 56/255, green: 125/255, blue: 245/255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 0/255, green: 150/255, blue: 255/255, alpha: 1)
         
         //bar text colour
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]

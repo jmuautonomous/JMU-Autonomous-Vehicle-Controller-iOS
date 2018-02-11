@@ -78,6 +78,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JgP-rR-8xg">
                         <rect key="frame" x="0.0" y="20" width="834" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -467,6 +471,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1pQ-tV-es2">
                         <rect key="frame" x="0.0" y="20" width="834" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -655,6 +663,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6lR-rt-SXl">
                         <rect key="frame" x="0.0" y="20" width="834" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -762,7 +774,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="About" id="8e2-Al-AeG">
                         <barButtonItem key="leftBarButtonItem" title="menu" image="menu" id="WUf-BK-3ro"/>
-                        <barButtonItem key="rightBarButtonItem" title="info" image="info" id="Kmp-A2-y0i"/>
+                        <barButtonItem key="rightBarButtonItem" title="info" image="info" id="Kmp-A2-y0i">
+                            <connections>
+                                <segue destination="rkN-fW-yme" kind="show" id="eIY-oo-NSX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -775,6 +791,24 @@
             </objects>
             <point key="canvasLocation" x="2018.7050359712232" y="3246.5827338129498"/>
         </scene>
+        <!--Contributors-->
+        <scene sceneID="qqC-UL-FXz">
+            <objects>
+                <viewController title="Contributors" id="rkN-fW-yme" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbD-dh-8kK">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mrL-47-wWo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Project Contributors" id="keM-Ay-Kb5">
+                        <barButtonItem key="backBarButtonItem" title="back" id="c9j-7C-0Ic"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDw-in-wJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2760" y="3247"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yss-u8-TTI">
             <objects>
@@ -783,6 +817,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rPR-6R-ZUM">
                         <rect key="frame" x="0.0" y="20" width="834" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -805,7 +846,7 @@
         <image name="xlabs-logo" width="927" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BvX-Cp-Nh9"/>
-        <segue reference="OwY-AA-dMv"/>
+        <segue reference="PmG-hq-ufo"/>
+        <segue reference="PCQ-uO-htv"/>
     </inferredMetricsTieBreakers>
 </document>
