@@ -15,7 +15,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var menuButton: UIBarButtonItem?
     @IBOutlet var mapView: MKMapView?
     @IBOutlet weak var ScrollView: UIScrollView!
-    
+    @IBOutlet weak var appVersionLabel: UILabel!
     
     let locationManager = CLLocationManager()
     
@@ -43,6 +43,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         sideMenus()
         customizeNavBar()
         onLoadMapView()
+        displayAppInfo()
         //googleMapsTest()
         //mapPolylineView(buttonNo: 2)
     }
@@ -256,5 +257,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         //bar text colour
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+    }
+    
+    //function to dynamically add app info
+    func displayAppInfo() {
+        let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+        let versionAndBuildNumber = "\(appVersionString) (\(buildNumber))"
+        self.appVersionLabel?.text = versionAndBuildNumber
     }
 }
