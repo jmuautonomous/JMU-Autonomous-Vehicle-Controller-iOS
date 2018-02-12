@@ -203,7 +203,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     //function that displays go to alert
     func goAlert(buttonNo: NSNumber) {
         let alert = UIAlertController(title: "Go to this destination?", message: "The vehicle will drive itself to your chosen destination", preferredStyle: .alert)
-        //let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "GoToViewController")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         alert.addAction(UIAlertAction(title: "Go", style: .default, handler: { (action) in
             if buttonNo == 1 {
@@ -218,7 +221,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             //alert.dismiss(animated: true, completion: nil)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in
-            //self.navigationController?.pushViewController(secondViewController!, animated: true)
+            appDelegate.window?.rootViewController = goToViewController
         }))
         
         self.present(alert, animated: true)

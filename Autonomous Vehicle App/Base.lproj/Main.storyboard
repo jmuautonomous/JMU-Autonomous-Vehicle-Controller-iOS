@@ -95,7 +95,7 @@
         <!--Map-->
         <scene sceneID="8Dh-Pf-S4n">
             <objects>
-                <viewController title="Map" id="sR4-sl-D3U" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" title="Map" id="sR4-sl-D3U" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nd3-C5-DT6">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,8 +135,8 @@
         <!--Go To-->
         <scene sceneID="whK-Vs-98t">
             <objects>
-                <viewController title="Go To" id="1zR-Ma-aJ7" customClass="SWRevealViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="GoToViewController" id="7fp-DT-M5d">
+                <viewController storyboardIdentifier="GoToViewController" title="Go To" id="1zR-Ma-aJ7" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fp-DT-M5d">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -755,13 +755,13 @@
                                                         <rect key="frame" x="0.0" y="51.5" width="722" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxo-4k-lUL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="680" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMV-7N-ORG">
-                                                                <rect key="frame" x="680" y="0.0" width="42" height="20.5"/>
+                                                                <rect key="frame" x="58.5" y="0.0" width="663.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
