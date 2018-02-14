@@ -53,6 +53,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         onLoadMapView()
         displaySensorData()
         displayAppInfo()
+        ApiRequest().getApiData()
         //googleMapsTest()
         //mapPolylineView(buttonNo: 2)
     }
