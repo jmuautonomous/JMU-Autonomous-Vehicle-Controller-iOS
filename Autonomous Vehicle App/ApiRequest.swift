@@ -9,8 +9,8 @@ import Foundation
 
 class ApiRequest {
     
-    func getApiData() {
-        guard let url = URL(string: "https://753f23f7-21dd-4d0a-95c9-9248f64ab854.mock.pstmn.io/V1/locations") else { return }
+    func getApiData(apiRequestLink: String) {
+        guard let url = URL(string: "https://753f23f7-21dd-4d0a-95c9-9248f64ab854.mock.pstmn.io/V1/" + apiRequestLink) else { return }
         
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in

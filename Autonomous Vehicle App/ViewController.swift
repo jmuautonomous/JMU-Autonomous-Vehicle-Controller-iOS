@@ -53,7 +53,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         onLoadMapView()
         displaySensorData()
         displayAppInfo()
-        ApiRequest().getApiData()
+        printJSONValues()
         //googleMapsTest()
         //mapPolylineView(buttonNo: 2)
     }
@@ -76,12 +76,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     @IBAction func goToButton2(_ sender: UIButton) {
         goAlert(buttonNo: 2)
+        printCSVValues()
     }
     @IBAction func goToButton3(_ sender: UIButton) {
         goAlert(buttonNo: 3)
+        printCSVValues()
     }
     @IBAction func goToButton4(_ sender: UIButton) {
         goAlert(buttonNo: 4)
+        printCSVValues()
     }
     
     //function to import CVS data
@@ -90,6 +93,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         data = ReadDataFromCSVFile().cleanRows(file: data!)
         let csvRows = ReadDataFromCSVFile().csv(data: data!)
         print(csvRows[1][0])
+    }
+    
+    //function to display api request value
+    func printJSONValues() {
+        ApiRequest().getApiData(apiRequestLink: "paths/isat-to-x-labs")
     }
     
     // jmu*Location = various coordinates of JMU POIs
