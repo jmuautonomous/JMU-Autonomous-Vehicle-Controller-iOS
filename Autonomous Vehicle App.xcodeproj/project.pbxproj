@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		0B877B8C64EC6843D14099E5 /* Pods_Autonomous_Vehicle_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27339A6E0FED51F12A9F01E /* Pods_Autonomous_Vehicle_AppTests.framework */; };
 		73E08954C4D71E29A1C83018 /* Pods_Autonomous_Vehicle_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B863A7B28660892FDEC90C18 /* Pods_Autonomous_Vehicle_AppUITests.framework */; };
-		D203AA9B2018F061005BF025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203AA9A2018F061005BF025 /* ViewController.swift */; };
 		D203AAA12018FC1C005BF025 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D203AAA02018FC1C005BF025 /* SWRevealViewController.m */; };
 		D20F6A6020184C5100CBC1F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20F6A5F20184C5100CBC1F1 /* MapKit.framework */; };
 		D23141972033F2EC000901F0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D23141962033F2EC000901F0 /* Podfile */; };
+		D24C5F7D203BED7A00788229 /* GoToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C5F7C203BED7A00788229 /* GoToViewController.swift */; };
+		D24C5F80203BED9500788229 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C5F7E203BED9500788229 /* SensorViewController.swift */; };
+		D24C5F81203BED9500788229 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C5F7F203BED9500788229 /* MapViewController.swift */; };
+		D24C5F83203BEDA300788229 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C5F82203BEDA300788229 /* AboutViewController.swift */; };
 		D2BC5AF22018197800CC11DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC5AF12018197800CC11DE /* AppDelegate.swift */; };
 		D2BC5AF92018197800CC11DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BC5AF72018197800CC11DE /* Main.storyboard */; };
 		D2BC5AFB2018197800CC11DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BC5AFA2018197800CC11DE /* Assets.xcassets */; };
@@ -48,13 +51,16 @@
 		8E1572ADA87557870531895A /* Pods-Autonomous Vehicle App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autonomous Vehicle App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Autonomous Vehicle App/Pods-Autonomous Vehicle App.release.xcconfig"; sourceTree = "<group>"; };
 		B863A7B28660892FDEC90C18 /* Pods_Autonomous_Vehicle_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Autonomous_Vehicle_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D052155F3F40F94E38347D48 /* Pods-Autonomous Vehicle AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autonomous Vehicle AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Autonomous Vehicle AppTests/Pods-Autonomous Vehicle AppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D203AA9A2018F061005BF025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D203AA9F2018FC1C005BF025 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		D203AAA02018FC1C005BF025 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D20F6A5F20184C5100CBC1F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D20F6A6120184C6300CBC1F1 /* Autonomous Vehicle App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Autonomous Vehicle App.entitlements"; sourceTree = "<group>"; };
 		D214EEA92018E46200985594 /* Autonomous Vehicle App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autonomous Vehicle App-Bridging-Header.h"; sourceTree = "<group>"; };
 		D23141962033F2EC000901F0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D24C5F7C203BED7A00788229 /* GoToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToViewController.swift; sourceTree = "<group>"; };
+		D24C5F7E203BED9500788229 /* SensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
+		D24C5F7F203BED9500788229 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D24C5F82203BEDA300788229 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D2BC5AEE2018197800CC11DE /* Autonomous Vehicle App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autonomous Vehicle App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC5AF12018197800CC11DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2BC5AF82018197800CC11DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,7 +162,10 @@
 				D20F6A6120184C6300CBC1F1 /* Autonomous Vehicle App.entitlements */,
 				D2BC5AF12018197800CC11DE /* AppDelegate.swift */,
 				D2BC5AF72018197800CC11DE /* Main.storyboard */,
-				D203AA9A2018F061005BF025 /* ViewController.swift */,
+				D24C5F7C203BED7A00788229 /* GoToViewController.swift */,
+				D24C5F7F203BED9500788229 /* MapViewController.swift */,
+				D24C5F7E203BED9500788229 /* SensorViewController.swift */,
+				D24C5F82203BEDA300788229 /* AboutViewController.swift */,
 				D2DAFB892019639C00880343 /* MapAnnotation.swift */,
 				D2BC5AFA2018197800CC11DE /* Assets.xcassets */,
 				D2BC5AFC2018197800CC11DE /* LaunchScreen.storyboard */,
@@ -499,10 +508,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D203AA9B2018F061005BF025 /* ViewController.swift in Sources */,
+				D24C5F7D203BED7A00788229 /* GoToViewController.swift in Sources */,
+				D24C5F80203BED9500788229 /* SensorViewController.swift in Sources */,
 				D2BC5AF22018197800CC11DE /* AppDelegate.swift in Sources */,
 				D203AAA12018FC1C005BF025 /* SWRevealViewController.m in Sources */,
 				D2DAFB8A2019639C00880343 /* MapAnnotation.swift in Sources */,
+				D24C5F83203BEDA300788229 /* AboutViewController.swift in Sources */,
+				D24C5F81203BED9500788229 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

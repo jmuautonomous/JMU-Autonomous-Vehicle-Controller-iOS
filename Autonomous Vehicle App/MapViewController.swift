@@ -2,26 +2,17 @@
 //  ViewController.swift
 //  Autonomous Vehicle App
 //
-//  Created by Ben Gilliam, JMU '18 on 1/24/18.
+//  Created by Ben Gilliam, JMU '18 on 2/20/18.
 //
 
 import UIKit
 import MapKit
 import GoogleMaps
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem?
     @IBOutlet var mapView: MKMapView?
-    @IBOutlet weak var ScrollView: UIScrollView!
-    @IBOutlet weak var appVersionLabel: UILabel!
-    
-    @IBOutlet weak var statusSensor_01: UILabel!
-    @IBOutlet weak var statusSensor_02: UILabel!
-    @IBOutlet weak var statusSensor_03: UILabel!
-    @IBOutlet weak var statusSensor_04: UILabel!
-    @IBOutlet weak var statusSensor_05: UILabel!
-    @IBOutlet weak var statusSensor_06: UILabel!
     
     //the json file url
     let URL_LOCATIONS = "http://educ.jmu.edu/~gilliabb/Inbox/locations.json";
@@ -37,9 +28,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView?.delegate = self
         mapView?.showsUserLocation = true
         
-        //set scrollview height
-        ScrollView?.contentSize.height = 1000
-        
         //requesting user location
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
@@ -54,11 +42,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //loading functions
         sideMenus()
         customizeNavBar()
-        getJsonFromUrl()
         onLoadMapView()
-        displaySensorData()
-        displayAppInfo()
-        //googleMapsTest()
+        googleMapsTest()
         //mapPolylineView(buttonNo: 2)
     }
     
@@ -70,73 +55,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     //Cut Off button onClick functions
     @IBAction func cutOffButton(_ sender: UIButton) {
         cutOffAlert()
-    }
-    
-    //this function is fetching the json from URL
-    func getJsonFromUrl(){
-        //creating a NSURL
-        let url = NSURL(string: URL_LOCATIONS)
-        
-        //fetching the data from the url
-        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
-            
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                
-                //printing the json in console
-                print(jsonObj!.value(forKey: "locations")!)
-                
-                //getting the avengers tag array from json and converting it to NSArray
-                if let locationsArray = jsonObj!.value(forKey: "locations") as? NSArray {
-                    //looping through all the elements
-                    for location in locationsArray{
-                        
-                        //converting the element to a dictionary
-                        if let locationDict = location as? NSDictionary {
-                            
-                            //getting the name from the dictionary
-                            if let name = locationDict.value(forKey: "name") {
-                                
-                                //adding the name to the array
-                                self.nameArray.append((name as? String)!)
-                            }
-                        }
-                    }
-                }
-                
-                OperationQueue.main.addOperation({
-                    //calling another function after fetching the json
-                    //it will show the names to label
-                    self.createDynamicButtons()
-                })
-            }
-        }).resume()
-    }
-    
-    //function to create buttons from returned api data
-    func createDynamicButtons() {
-        
-        var toGoButtonHeight = 64
-        
-        for name in nameArray{
-            
-            let toGoButton = UIButton(frame: CGRect(x: 0, y: toGoButtonHeight, width: 320, height: 48))
-            toGoButton.setTitle(name, for: .normal)
-            //toGoButton.backgroundColor = .white
-            toGoButton.setBackgroundImage(UIImage(named: "white"), for: .normal)
-            toGoButton.setBackgroundImage(UIImage(named: "highlight"), for: .selected)
-            toGoButton.setTitleColor(UIColor.black, for: .normal)
-            toGoButton.layer.borderColor = UIColor(displayP3Red: 0.87, green: 0.87, blue: 0.87, alpha: 1).cgColor
-            toGoButton.layer.borderWidth = 1
-            toGoButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-            self.view.addSubview(toGoButton)
-            toGoButtonHeight = toGoButtonHeight + 47
-        }
-    }
-    @objc func buttonAction(sender: UIButton) {
-        //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //let newViewController = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        //self.present(newViewController, animated: true, completion: nil)
-        goAlert(buttonNo: 1)
     }
     
     // jmu*Location = various coordinates of JMU POIs
@@ -223,16 +141,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         renderer.lineWidth = 5.0
         
         return renderer
-    }
-    
-    //function to display sensor data
-    func displaySensorData() {
-        self.statusSensor_01?.text = "37V"
-        self.statusSensor_02?.text = "Good"
-        self.statusSensor_03?.text = "Good"
-        self.statusSensor_04?.text = "Good"
-        self.statusSensor_05?.text = "Good"
-        self.statusSensor_06?.text = "Good"
     }
     
     //function that displays cut off alert
@@ -329,13 +237,5 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         //bar text colour
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-    }
-    
-    //function to dynamically add app info
-    func displayAppInfo() {
-        let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-        let buildNumber: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
-        let versionAndBuildNumber = "\(appVersionString) (\(buildNumber))"
-        self.appVersionLabel?.text = versionAndBuildNumber
     }
 }

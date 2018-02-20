@@ -13,7 +13,7 @@
         <!--Map-->
         <scene sceneID="aO7-rY-ck3">
             <objects>
-                <viewController title="Map" id="Wcj-3Z-mVP" customClass="ViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="Wcj-3Z-mVP" customClass="MapViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYw-2V-FlM">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,7 +306,7 @@
         <!--To Go-->
         <scene sceneID="giM-UM-ebu">
             <objects>
-                <viewController title="To Go" id="viU-Nj-5rQ" customClass="ViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="To Go" id="viU-Nj-5rQ" customClass="GoToViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jq5-1B-WxN">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,7 +388,7 @@
         <!--Sensor View-->
         <scene sceneID="Xg5-7f-Aah">
             <objects>
-                <viewController title="Sensor View" id="240-TJ-DEC" customClass="ViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sensor View" id="240-TJ-DEC" customClass="SensorViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Lz-il-5UV">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -810,7 +810,7 @@
         <!--About-->
         <scene sceneID="blZ-X4-bBb">
             <objects>
-                <viewController title="About" id="X1V-PJ-wrV" customClass="ViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="About" id="X1V-PJ-wrV" customClass="AboutViewController" customModule="Autonomous_Vehicle_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="McA-lm-bd0">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
