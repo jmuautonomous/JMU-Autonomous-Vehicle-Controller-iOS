@@ -11,7 +11,6 @@ import GoogleMaps
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    
     @IBOutlet weak var menuButton: UIBarButtonItem?
     @IBOutlet var mapView: MKMapView?
     @IBOutlet weak var ScrollView: UIScrollView!
@@ -24,6 +23,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var statusSensor_05: UILabel!
     @IBOutlet weak var statusSensor_06: UILabel!
     
+    //the json file url
+    let URL_LOCATIONS = "http://educ.jmu.edu/~gilliabb/Inbox/locations.json";
+    
+    //A string array to save all the names
+    var nameArray = [String]()
     
     let locationManager = CLLocationManager()
     
@@ -50,10 +54,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //loading functions
         sideMenus()
         customizeNavBar()
+        getJsonFromUrl()
         onLoadMapView()
         displaySensorData()
         displayAppInfo()
-        printJSONValues()
         //googleMapsTest()
         //mapPolylineView(buttonNo: 2)
     }
@@ -68,36 +72,71 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         cutOffAlert()
     }
     
+    //this function is fetching the json from URL
+    func getJsonFromUrl(){
+        //creating a NSURL
+        let url = NSURL(string: URL_LOCATIONS)
+        
+        //fetching the data from the url
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                
+                //printing the json in console
+                print(jsonObj!.value(forKey: "locations")!)
+                
+                //getting the avengers tag array from json and converting it to NSArray
+                if let locationsArray = jsonObj!.value(forKey: "locations") as? NSArray {
+                    //looping through all the elements
+                    for location in locationsArray{
+                        
+                        //converting the element to a dictionary
+                        if let locationDict = location as? NSDictionary {
+                            
+                            //getting the name from the dictionary
+                            if let name = locationDict.value(forKey: "name") {
+                                
+                                //adding the name to the array
+                                self.nameArray.append((name as? String)!)
+                            }
+                        }
+                    }
+                }
+                
+                OperationQueue.main.addOperation({
+                    //calling another function after fetching the json
+                    //it will show the names to label
+                    self.createDynamicButtons()
+                })
+            }
+        }).resume()
+    }
     
-    //Go to button onClick functions
-    @IBAction func goToButton1(_ sender: UIButton) {
+    //function to create buttons from returned api data
+    func createDynamicButtons() {
+        
+        var toGoButtonHeight = 64
+        
+        for name in nameArray{
+            
+            let toGoButton = UIButton(frame: CGRect(x: 0, y: toGoButtonHeight, width: 320, height: 48))
+            toGoButton.setTitle(name, for: .normal)
+            //toGoButton.backgroundColor = .white
+            toGoButton.setBackgroundImage(UIImage(named: "white"), for: .normal)
+            toGoButton.setBackgroundImage(UIImage(named: "highlight"), for: .selected)
+            toGoButton.setTitleColor(UIColor.black, for: .normal)
+            toGoButton.layer.borderColor = UIColor(displayP3Red: 0.87, green: 0.87, blue: 0.87, alpha: 1).cgColor
+            toGoButton.layer.borderWidth = 1
+            toGoButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            self.view.addSubview(toGoButton)
+            toGoButtonHeight = toGoButtonHeight + 47
+        }
+    }
+    @objc func buttonAction(sender: UIButton) {
+        //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //let newViewController = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        //self.present(newViewController, animated: true, completion: nil)
         goAlert(buttonNo: 1)
-        printCSVValues()
-    }
-    @IBAction func goToButton2(_ sender: UIButton) {
-        goAlert(buttonNo: 2)
-        printCSVValues()
-    }
-    @IBAction func goToButton3(_ sender: UIButton) {
-        goAlert(buttonNo: 3)
-        printCSVValues()
-    }
-    @IBAction func goToButton4(_ sender: UIButton) {
-        goAlert(buttonNo: 4)
-        printCSVValues()
-    }
-    
-    //function to import CVS data
-    func printCSVValues() {
-        var data = ReadDataFromCSVFile().readDataFromCSV(fileName: "path_isat_to_lakeview", fileType: "csv")
-        data = ReadDataFromCSVFile().cleanRows(file: data!)
-        let csvRows = ReadDataFromCSVFile().csv(data: data!)
-        print(csvRows[1][0])
-    }
-    
-    //function to display api request value
-    func printJSONValues() {
-        ApiRequest().getApiData(apiRequestLink: "paths/isat-to-x-labs")
     }
     
     // jmu*Location = various coordinates of JMU POIs
@@ -206,7 +245,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
-        
     }
     
     //function that displays go to alert

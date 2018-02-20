@@ -1,6 +1,4 @@
 PODS:
-  - CSVImporter (1.8.0):
-    - HandySwift (~> 2.4)
   - GoogleMaps (2.5.0):
     - GoogleMaps/Maps (= 2.5.0)
   - GoogleMaps/Base (2.5.0)
@@ -8,19 +6,15 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.5.0):
     - GoogleMaps/Base (= 2.5.0)
-  - HandySwift (2.4.0)
 
 DEPENDENCIES:
-  - CSVImporter
   - GoogleMaps
   - GooglePlaces
 
 SPEC CHECKSUMS:
-  CSVImporter: 22a447eaa740fb090bbddcde51797f28ca95e01e
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
-  HandySwift: f45ddf58a1d8a60cb58a3214bc4f87814874fd41
 
-PODFILE CHECKSUM: a9855dd4e6dcb42c7418206386e3dff6b7c8e85c
+PODFILE CHECKSUM: 685b6e35647a77b5cc7a974f60c732083aa222ec
 
 COCOAPODS: 1.4.0

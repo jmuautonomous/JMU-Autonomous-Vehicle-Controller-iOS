@@ -336,116 +336,16 @@
                                 <rect key="frame" x="0.0" y="64" width="768" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <stackView opaque="NO" contentMode="center" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T2Z-JL-lg3">
-                                <rect key="frame" x="0.0" y="120" width="768" height="192"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8H-ad-Qub">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="48"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="8u7-9Q-hV7"/>
-                                        </constraints>
-                                        <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="button-background">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="X-Labs">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="18"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToButton1:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="IHR-Dv-nyf"/>
-                                            <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="WY3-aS-egq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0p-E7-M5T">
-                                        <rect key="frame" x="0.0" y="48" width="768" height="48"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="3C0-ZT-e7g"/>
-                                        </constraints>
-                                        <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="button-background">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Festival">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="18"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToButton2:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="E9B-o2-J8k"/>
-                                            <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="PCQ-uO-htv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2s4-w0-UeP">
-                                        <rect key="frame" x="0.0" y="96" width="768" height="48"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="TJ0-7B-kXg"/>
-                                        </constraints>
-                                        <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="button-background">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Madison Union">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="18"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToButton3:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="8Or-ku-wKM"/>
-                                            <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="3uv-BB-p0L"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cd1-3G-cPa">
-                                        <rect key="frame" x="0.0" y="144" width="768" height="48"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="tKo-SR-UpX"/>
-                                        </constraints>
-                                        <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="button-background">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Quad">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="18"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToButton4:" destination="viU-Nj-5rQ" eventType="touchUpInside" id="HaM-XQ-tPC"/>
-                                            <segue destination="sR4-sl-D3U" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="OwY-AA-dMv"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FdA-vG-zLW" secondAttribute="trailing" id="9Ce-h4-xh7"/>
                             <constraint firstItem="tnb-4y-5FB" firstAttribute="leading" secondItem="vom-pd-FVg" secondAttribute="leading" id="BmU-uv-cGC"/>
-                            <constraint firstItem="vom-pd-FVg" firstAttribute="trailing" secondItem="T2Z-JL-lg3" secondAttribute="trailing" id="C2i-au-X1z"/>
                             <constraint firstAttribute="trailing" secondItem="FdA-vG-zLW" secondAttribute="trailing" id="CEb-Cg-38A"/>
                             <constraint firstItem="vom-pd-FVg" firstAttribute="trailing" secondItem="FdA-vG-zLW" secondAttribute="trailing" id="GA8-nA-Bhz"/>
                             <constraint firstItem="tnb-4y-5FB" firstAttribute="trailing" secondItem="vom-pd-FVg" secondAttribute="trailing" id="Nip-iM-k2x"/>
                             <constraint firstItem="tnb-4y-5FB" firstAttribute="bottom" secondItem="vom-pd-FVg" secondAttribute="bottom" id="cWE-CN-Tqq"/>
-                            <constraint firstItem="T2Z-JL-lg3" firstAttribute="top" secondItem="FdA-vG-zLW" secondAttribute="bottom" constant="8" id="p2Y-od-VMz"/>
                             <constraint firstItem="FdA-vG-zLW" firstAttribute="leading" secondItem="vom-pd-FVg" secondAttribute="leading" id="rmC-fD-7wH"/>
-                            <constraint firstItem="T2Z-JL-lg3" firstAttribute="leading" secondItem="vom-pd-FVg" secondAttribute="leading" id="vfW-Mf-CvB"/>
                         </constraints>
                         <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
                         <viewLayoutGuide key="safeArea" id="vom-pd-FVg"/>
@@ -494,7 +394,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="AF5-Ln-Of9">
-                                <rect key="frame" x="0.0" y="64" width="768" height="442"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="444"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzh-dB-hdn">
                                         <rect key="frame" x="20" y="0.0" width="728" height="72"/>
@@ -772,6 +672,26 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILf-JV-pNj">
+                                        <rect key="frame" x="20" y="444" width="728" height="0.0"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4bm-i9-UyB">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="Jf3-jy-jUg"/>
+                                                    <constraint firstAttribute="height" constant="72" id="vCe-gd-PgK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rs8-Ig-dzD">
+                                                <rect key="frame" x="72" y="0.0" width="656" height="0.0"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-GA-yu8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="0.0"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Tez-v3-KQn" firstAttribute="leading" secondItem="AF5-Ln-Of9" secondAttribute="leading" constant="20" id="5V6-n9-Az9"/>
@@ -785,12 +705,14 @@
                                     <constraint firstAttribute="trailing" secondItem="Qzh-dB-hdn" secondAttribute="trailing" constant="20" id="aL4-c2-hEM"/>
                                     <constraint firstAttribute="trailing" secondItem="ttp-ev-GcS" secondAttribute="trailing" constant="20" id="iFU-CQ-AAm"/>
                                     <constraint firstAttribute="trailing" secondItem="HJt-Om-UKH" secondAttribute="trailing" constant="20" id="mKi-2v-GMq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ILf-JV-pNj" secondAttribute="trailing" constant="20" id="pIz-Kx-bvm"/>
                                     <constraint firstItem="HJt-Om-UKH" firstAttribute="leading" secondItem="AF5-Ln-Of9" secondAttribute="leading" constant="20" id="rC5-Qk-vcM"/>
                                     <constraint firstAttribute="trailing" secondItem="6HT-2u-3Wa" secondAttribute="trailing" constant="20" id="rHu-p1-AKq"/>
+                                    <constraint firstItem="ILf-JV-pNj" firstAttribute="leading" secondItem="AF5-Ln-Of9" secondAttribute="leading" constant="20" id="yRC-Oz-zDc"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFf-j3-6cr">
-                                <rect key="frame" x="0.0" y="506" width="768" height="48"/>
+                                <rect key="frame" x="0.0" y="508" width="768" height="48"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.2784313725" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qoH-KE-exO"/>
@@ -1024,7 +946,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="button-background" width="288" height="48"/>
         <image name="globe" width="36" height="36"/>
         <image name="info" width="36" height="36"/>
         <image name="location" width="24" height="24"/>
@@ -1040,7 +961,6 @@
         <image name="xlabs-logo" width="927" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jnl-1f-aoc"/>
-        <segue reference="OwY-AA-dMv"/>
+        <segue reference="PmG-hq-ufo"/>
     </inferredMetricsTieBreakers>
 </document>

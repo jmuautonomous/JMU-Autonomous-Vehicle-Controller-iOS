@@ -10,7 +10,6 @@ target 'Autonomous Vehicle App' do
 
   pod 'GoogleMaps'
   pod 'GooglePlaces'
-  pod 'CSVImporter'
 
   target 'Autonomous Vehicle AppTests' do
     inherit! :search_paths

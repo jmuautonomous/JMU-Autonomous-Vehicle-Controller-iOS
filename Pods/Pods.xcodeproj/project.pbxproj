@@ -7,137 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		044153340EB18AA2B4589A197C0956EA /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2001C4F6E3EAD9820FDAD02448535 /* IntExtension.swift */; };
-		0A876AFBB3AC01BC8AC9B37C3F0093F7 /* HandySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B51282F11D0F58EC7DFAD55272460FC2 /* HandySwift-dummy.m */; };
 		1E8815B570AC6B13B4CCCDD2C1B42FA9 /* Pods-Autonomous Vehicle AppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDFF5F8BD151FA52D40FC90A323DEFF /* Pods-Autonomous Vehicle AppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2ECE2E9A6B41D41994669ABD9ADCECCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5728333B43491EFF1FF7C88FB5781CE0 /* Foundation.framework */; };
-		33AD0EA5E7F3134B1FB27FB9394BAEB9 /* CSVImporter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5D097FD055DD2BCEA1E95B7E51D11A /* CSVImporter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35E320570275B8C747DC5834D446C8F0 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB071AA1AA18737E153D2186075C8BC /* ArrayExtension.swift */; };
+		245B4DA15E7C432D6BBF4BC392B3464A /* Pods-Autonomous Vehicle App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BA171684C779109A2803B38A8CEA64 /* Pods-Autonomous Vehicle App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36C089DE8A218FF8D2918CBDE5E40849 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		457F126895DC106790A534C8B08EE758 /* Pods-Autonomous Vehicle AppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2896433319DAD76AC7FF460BDFCF3BC6 /* Pods-Autonomous Vehicle AppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C055AD9B5F0F6563AD96144DDD6EC22 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2483462C7109EA43050E14B85AF7DF37 /* CSVImporter.swift */; };
 		4D88FBFCB9CEEA0D9FDF6238A5E4AA79 /* Pods-Autonomous Vehicle AppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38106FA8C2349AC36BC5F34C3AA00E45 /* Pods-Autonomous Vehicle AppTests-dummy.m */; };
-		4EBDB783D3675D7EA4938114E280F8CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5728333B43491EFF1FF7C88FB5781CE0 /* Foundation.framework */; };
-		51CD75DE442268DE6EDFB9640379690E /* FrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DEDCD7A1E2A25A9885F3BDCB04897 /* FrequencyTable.swift */; };
-		5E4C01D065DBB69D34DAA5320B97FD60 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC754C3F77C031D69891A28E4194B8D5 /* StringExtension.swift */; };
-		68AEEB1B4B2D93AC52987FA44AD54D08 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0B000F8180ECF86F51DED4E02A8C3 /* Globals.swift */; };
-		6CAEE99852BBA1D63630457B7F48F806 /* Pods-Autonomous Vehicle App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9CA49420BD6E4CFC798A24CDFC4EEC /* Pods-Autonomous Vehicle App-dummy.m */; };
-		6CE84D44C5AF4FF0BA9A2EC5F270377D /* Pods-Autonomous Vehicle App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BA171684C779109A2803B38A8CEA64 /* Pods-Autonomous Vehicle App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F27AD337DD1797ECB04ADF8F302FB3F /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52B4E3359AD6129C60535D8BF5D59 /* DictionaryExtension.swift */; };
-		8130CF29D677DE4B381A6F984F4C756C /* CharacterViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1F059897EE1E13F38EAF86212DB62A /* CharacterViewExtension.swift */; };
-		8797DADEC1F90FF1DF64CECEE6D1A5E8 /* CSVImporter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DCAC9939E5A8F6B601C20FFF899A05 /* CSVImporter-dummy.m */; };
-		8FA495C5F9F060C0B03978C9A4150BE6 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE63DA5102E3D8C10384CADA7F97BED /* FileSource.swift */; };
-		93505D687FABE61979D0E77FCE70604C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5728333B43491EFF1FF7C88FB5781CE0 /* Foundation.framework */; };
+		4EBDB783D3675D7EA4938114E280F8CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		9D659D1743A7E1F2AE8A4AA3886820C6 /* Pods-Autonomous Vehicle AppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5168B1711EC429FA08676A8490CC5D1B /* Pods-Autonomous Vehicle AppUITests-dummy.m */; };
-		A66C92A37A7980A202EBE9D5DC76B4BE /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41492A48E1AC8FB60C45996071D4D66C /* StringSource.swift */; };
-		C511030CA780AF91626D0E56865E8D11 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8CDD82382CCCCDE6B9D0C2ECBA9CC /* TimeIntervalExtension.swift */; };
-		C89DF47439575181BA4655FA58356583 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823126C9B790323365468749C7751C77 /* Source.swift */; };
-		CA8FC787D15AB89518208C0522E667F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5728333B43491EFF1FF7C88FB5781CE0 /* Foundation.framework */; };
-		CB9980E9A13AA7DA3654F5DA5E700CCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5728333B43491EFF1FF7C88FB5781CE0 /* Foundation.framework */; };
-		DA1AE64CB0FC928DA0F629AF1572D1B2 /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B673A93CD965C663F702977EAE9DF20 /* SortedArray.swift */; };
-		DAC62F1BE9E06A9AE94C8660170B01B5 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7DD64DAE6EDA3ECF68760361CF8788 /* HandySwift.framework */; };
-		DB91EF9EAC8D1F36FF35AFCC617A44B5 /* IntegerTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61705AA5A82A8221E07466F0A5A0AACF /* IntegerTypeExtension.swift */; };
-		E4B531F8EA2FABC3B9F3F956C3E38AA4 /* DispatchTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF420E27ECDB16A6AED21712AC9690 /* DispatchTimeIntervalExtension.swift */; };
-		F809DF0A6AEAC6DFE1AE71BAA5643B5E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1577A06E3BC0A87BA75C8D6E96D23DD /* TextFile.swift */; };
-		FCB5ED23AF9215B44B383048FDDEA7C2 /* HandySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C929FE579A7BE882A486679280A8546 /* HandySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B366F5752FDA35DE1DC83AC96D515E13 /* Pods-Autonomous Vehicle App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9CA49420BD6E4CFC798A24CDFC4EEC /* Pods-Autonomous Vehicle App-dummy.m */; };
+		CA8FC787D15AB89518208C0522E667F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1E6D768288C3B27C3CE0939B89EFB662 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09F03AEBECA3F26FA985C2B238B2C610;
-			remoteInfo = CSVImporter;
-		};
-		44D7026D076B1E0365948B6CC77742F4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15A476D24007C2CD4BE89E820E9140AA;
-			remoteInfo = HandySwift;
-		};
-		9B24D297B5B3ADB1B331D2416C85DF4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15A476D24007C2CD4BE89E820E9140AA;
-			remoteInfo = HandySwift;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		01CF420E27ECDB16A6AED21712AC9690 /* DispatchTimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchTimeIntervalExtension.swift; path = Sources/Extensions/DispatchTimeIntervalExtension.swift; sourceTree = "<group>"; };
+		08F1229163C7F5E61C7C4B361510F11C /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		0DDFF5F8BD151FA52D40FC90A323DEFF /* Pods-Autonomous Vehicle AppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Autonomous Vehicle AppUITests-umbrella.h"; sourceTree = "<group>"; };
 		17B9B2E9C94ED8A0F6A53B31245B55FB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E33795C69232D1DAE70A2B639AC729 /* Pods-Autonomous Vehicle AppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Autonomous Vehicle AppTests-resources.sh"; sourceTree = "<group>"; };
-		1B1F059897EE1E13F38EAF86212DB62A /* CharacterViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterViewExtension.swift; path = Sources/Extensions/CharacterViewExtension.swift; sourceTree = "<group>"; };
+		1C6200385182862E9168588E60B1CD37 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		1E21414194C6227EB7C394BE98E95841 /* Pods-Autonomous Vehicle AppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Autonomous Vehicle AppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1F6DEDCD7A1E2A25A9885F3BDCB04897 /* FrequencyTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrequencyTable.swift; path = Sources/Structs/FrequencyTable.swift; sourceTree = "<group>"; };
-		2483462C7109EA43050E14B85AF7DF37 /* CSVImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSVImporter.swift; path = Sources/Code/CSVImporter.swift; sourceTree = "<group>"; };
-		25B200AA1F9CFBA54DAB4535241CD3BD /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		2896433319DAD76AC7FF460BDFCF3BC6 /* Pods-Autonomous Vehicle AppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Autonomous Vehicle AppTests-umbrella.h"; sourceTree = "<group>"; };
 		2D882381903CE74EF0B0268FF6669280 /* Pods-Autonomous Vehicle App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Autonomous Vehicle App-acknowledgements.plist"; sourceTree = "<group>"; };
 		2F55B2D6EBD1DF556B364CA04DA05303 /* Pods-Autonomous Vehicle AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autonomous Vehicle AppTests.release.xcconfig"; sourceTree = "<group>"; };
-		30A1E9E40999352B14D49BC4F5B2AD4D /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		32BA171684C779109A2803B38A8CEA64 /* Pods-Autonomous Vehicle App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Autonomous Vehicle App-umbrella.h"; sourceTree = "<group>"; };
 		38106FA8C2349AC36BC5F34C3AA00E45 /* Pods-Autonomous Vehicle AppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Autonomous Vehicle AppTests-dummy.m"; sourceTree = "<group>"; };
-		3AF8CDD82382CCCCDE6B9D0C2ECBA9CC /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = Sources/Extensions/TimeIntervalExtension.swift; sourceTree = "<group>"; };
-		3D5D097FD055DD2BCEA1E95B7E51D11A /* CSVImporter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSVImporter-umbrella.h"; sourceTree = "<group>"; };
-		41492A48E1AC8FB60C45996071D4D66C /* StringSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringSource.swift; path = Sources/Code/StringSource.swift; sourceTree = "<group>"; };
-		49F5EA97DE5DA730CED8CE3D32B99796 /* HandySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HandySwift.framework; path = HandySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B673A93CD965C663F702977EAE9DF20 /* SortedArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SortedArray.swift; path = Sources/Structs/SortedArray.swift; sourceTree = "<group>"; };
-		4DE4D931F49F68AE481DB6B24A6607BF /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		4FE63DA5102E3D8C10384CADA7F97BED /* FileSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileSource.swift; path = Sources/Code/FileSource.swift; sourceTree = "<group>"; };
 		5168B1711EC429FA08676A8490CC5D1B /* Pods-Autonomous Vehicle AppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Autonomous Vehicle AppUITests-dummy.m"; sourceTree = "<group>"; };
-		5332F06A47C6FBBDCE1CAE4A217B8CB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53C21B430E03265CD38CA77B79A94323 /* Pods-Autonomous Vehicle AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autonomous Vehicle AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5728333B43491EFF1FF7C88FB5781CE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5AC03D1777DE1FB3CD5661982689C2C2 /* Pods-Autonomous Vehicle App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autonomous Vehicle App.debug.xcconfig"; sourceTree = "<group>"; };
-		61705AA5A82A8221E07466F0A5A0AACF /* IntegerTypeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerTypeExtension.swift; path = Sources/Extensions/IntegerTypeExtension.swift; sourceTree = "<group>"; };
 		62C6AB2148233589A449FDC2730EA962 /* Pods-Autonomous Vehicle AppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Autonomous Vehicle AppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		670E3F5880DF4C4D88ECBC7067703821 /* Pods-Autonomous Vehicle App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Autonomous Vehicle App-resources.sh"; sourceTree = "<group>"; };
 		682446830B60D84DFAB7C09433B19B6A /* Pods-Autonomous Vehicle AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autonomous Vehicle AppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6C49D1E9C05B7798CD4408F403ED6147 /* CSVImporter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSVImporter-prefix.pch"; sourceTree = "<group>"; };
-		6CC2001C4F6E3EAD9820FDAD02448535 /* IntExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = Sources/Extensions/IntExtension.swift; sourceTree = "<group>"; };
-		73300EF53C089C8C5C4BD617792F901F /* CSVImporter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSVImporter.xcconfig; sourceTree = "<group>"; };
+		70324FDF1FBB41BEA92DE76E00BD3E96 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		7EF0751191BD3A68DDCE78471DD57245 /* Pods-Autonomous Vehicle AppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Autonomous Vehicle AppTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		823126C9B790323365468749C7751C77 /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/Code/Source.swift; sourceTree = "<group>"; };
-		82B52B4E3359AD6129C60535D8BF5D59 /* DictionaryExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtension.swift; path = Sources/Extensions/DictionaryExtension.swift; sourceTree = "<group>"; };
 		855EBC95C3D6C9F54570F6F99D4380CB /* Pods-Autonomous Vehicle AppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Autonomous Vehicle AppUITests-frameworks.sh"; sourceTree = "<group>"; };
-		85DCAC9939E5A8F6B601C20FFF899A05 /* CSVImporter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSVImporter-dummy.m"; sourceTree = "<group>"; };
 		8947A4C1AA78C93AE31DDD8F67B5473F /* Pods-Autonomous Vehicle AppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Autonomous Vehicle AppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8C929FE579A7BE882A486679280A8546 /* HandySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandySwift-umbrella.h"; sourceTree = "<group>"; };
-		8CDC840A2E3F721CC5D0006699A2DB34 /* CSVImporter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CSVImporter.modulemap; sourceTree = "<group>"; };
-		907EA76405398986EA60FCA27CDD9B46 /* Pods_Autonomous_Vehicle_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Autonomous_Vehicle_App.framework; path = "Pods-Autonomous Vehicle App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9694F47BB3EFF4CBF280ABFB1CD809E9 /* HandySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = HandySwift.modulemap; sourceTree = "<group>"; };
 		9F1E292AEC0EB21C1B225DBCBB60D539 /* Pods-Autonomous Vehicle AppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Autonomous Vehicle AppUITests-resources.sh"; sourceTree = "<group>"; };
-		A1577A06E3BC0A87BA75C8D6E96D23DD /* TextFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFile.swift; path = Sources/Code/TextFile.swift; sourceTree = "<group>"; };
-		AB5CFCAE19EB37CDBF1557C90AA0E2A3 /* Pods_Autonomous_Vehicle_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Autonomous_Vehicle_AppUITests.framework; path = "Pods-Autonomous Vehicle AppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABBD79C820F61FE7B7E4C87D0840808C /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		AC7DD64DAE6EDA3ECF68760361CF8788 /* HandySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0A0B000F8180ECF86F51DED4E02A8C3 /* Globals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = Sources/Globals.swift; sourceTree = "<group>"; };
-		B202305AA3DCF27B929ABB4B81C45CEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B51282F11D0F58EC7DFAD55272460FC2 /* HandySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HandySwift-dummy.m"; sourceTree = "<group>"; };
-		BA53EE18422DD7E94106BFF96B16BC57 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		C4B8B5DAF5A80C85D51F4DF01E01FF64 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CSVImporter.framework; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D12CE8935E6C9D2FEF1C56C115DE11BB /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		A65ED65616C5861E2765BDC60AAAF910 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		A92DFDA40F47C0FD221B2872C31099A1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		AA6B5C52CE863A806EFDE431D52D5632 /* Pods_Autonomous_Vehicle_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Autonomous_Vehicle_App.framework; path = "Pods-Autonomous Vehicle App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22C69ADCE7C9D529F11B17B4EF5E065 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		C6CB06DFB81AB2D4969CCC76E7EFF86C /* Pods_Autonomous_Vehicle_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Autonomous_Vehicle_AppUITests.framework; path = "Pods-Autonomous Vehicle AppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17717975F6D18A0581BBC6FBC9AD867 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4728B120D08570A67E15B04D07458B1 /* HandySwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandySwift-prefix.pch"; sourceTree = "<group>"; };
-		DBD286A2A11A143F1EA10F576BEAC7DA /* Pods_Autonomous_Vehicle_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Autonomous_Vehicle_AppTests.framework; path = "Pods-Autonomous Vehicle AppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC754C3F77C031D69891A28E4194B8D5 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Sources/Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		DD5161EF43A9807760D164980084E94F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0C93A6A4E2A78DE94537D08087FB0CD /* Pods-Autonomous Vehicle AppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Autonomous Vehicle AppUITests.modulemap"; sourceTree = "<group>"; };
 		E3CCC740684F7AB93703DE9C1101CF9B /* Pods-Autonomous Vehicle AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autonomous Vehicle AppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E43DFB9B434781A3489AE6A489001183 /* HandySwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HandySwift.xcconfig; sourceTree = "<group>"; };
 		E6C5CBB31FAF642216BBE2D1DE65A011 /* Pods-Autonomous Vehicle App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Autonomous Vehicle App-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E7CC4FB566103032278FA2F3A1582AF1 /* Pods-Autonomous Vehicle AppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Autonomous Vehicle AppTests-frameworks.sh"; sourceTree = "<group>"; };
 		EB1601674A5F63A53B021751E754E0D5 /* Pods-Autonomous Vehicle App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Autonomous Vehicle App-frameworks.sh"; sourceTree = "<group>"; };
 		ED9CA49420BD6E4CFC798A24CDFC4EEC /* Pods-Autonomous Vehicle App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Autonomous Vehicle App-dummy.m"; sourceTree = "<group>"; };
+		EF62EBCEF1E8640B6E83FB52E24B591A /* Pods_Autonomous_Vehicle_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Autonomous_Vehicle_AppTests.framework; path = "Pods-Autonomous Vehicle AppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BDC34AD4101256A8722C1349CCB0D0 /* Pods-Autonomous Vehicle AppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Autonomous Vehicle AppTests.modulemap"; sourceTree = "<group>"; };
 		F6421F507953656C4EBF1CD87C60E464 /* Pods-Autonomous Vehicle App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Autonomous Vehicle App.release.xcconfig"; sourceTree = "<group>"; };
 		F9DB510E3470878EF060C730D18F744E /* Pods-Autonomous Vehicle App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Autonomous Vehicle App.modulemap"; sourceTree = "<group>"; };
-		FDB071AA1AA18737E153D2186075C8BC /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,14 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60617FCE910A0E3E5A5B04615D79DFA8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB9980E9A13AA7DA3654F5DA5E700CCE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		65EACEDF0493220C45DB37A222FB3EE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,35 +79,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B8B0F2E0258EBAC42FB0DE896782EFB /* Frameworks */ = {
+		813C61FAFE93BB39BD5C1E77CF8A3986 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ECE2E9A6B41D41994669ABD9ADCECCF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7D3E08C22169D047B1C32DB0E5029623 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93505D687FABE61979D0E77FCE70604C /* Foundation.framework in Frameworks */,
-				DAC62F1BE9E06A9AE94C8660170B01B5 /* HandySwift.framework in Frameworks */,
+				36C089DE8A218FF8D2918CBDE5E40849 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		272AE5476F30A1B6BDE65BDDE1E1D6A9 /* Pods */ = {
+		00B63D9B3EBC8ECAFD5DA8C24F1A42DF /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				866701ACDB7F91D6C8F17D75A829E098 /* CSVImporter */,
-				32DB815BC424911A8BD8F974602D255A /* GoogleMaps */,
-				75F62BE7EFFDC3E0131E599F380A04A7 /* GooglePlaces */,
-				75EF89C2928DD1534E3030C4CC087FF9 /* HandySwift */,
+				475420FA59EFC8377CF994A338979247 /* Frameworks */,
+				09DB508F39D8BE758EA4A7B9047268E9 /* Resources */,
 			);
-			name = Pods;
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		09DB508F39D8BE758EA4A7B9047268E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A65ED65616C5861E2765BDC60AAAF910 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		26C94CF6FBD559155351548F2127E7DB /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				B2F22323EA3B1ADB4F96376E3F709A68 /* Base */,
+				488E301C4ACDDA928635C4886F5F6158 /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		2E9B387F5819EB0A368847BE285438AC /* Targets Support Files */ = {
@@ -206,160 +128,100 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		32DB815BC424911A8BD8F974602D255A /* GoogleMaps */ = {
+		343584E22C57489C672A8E6F731CB43A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F9C62A619448BA8C5FACE691A55231D2 /* Base */,
-				5D6E67E19DBB2376BCE13AAA36D16EFD /* Maps */,
-			);
-			name = GoogleMaps;
-			path = GoogleMaps;
-			sourceTree = "<group>";
-		};
-		438840F0F9953AC3C76ADC16D78B6AC8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				30A1E9E40999352B14D49BC4F5B2AD4D /* GooglePlaces.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4CA2CD2D201901BA09AB8C3DD6E7DC70 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5728333B43491EFF1FF7C88FB5781CE0 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		5D6E67E19DBB2376BCE13AAA36D16EFD /* Maps */ = {
-			isa = PBXGroup;
-			children = (
-				D461EA094E234059CC129AF1AF515585 /* Frameworks */,
-				EB809760FCA6AE0AE08BF26477F12B5F /* Resources */,
-			);
-			name = Maps;
-			sourceTree = "<group>";
-		};
-		745C994F26D293D8BA054E40B7486815 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D12CE8935E6C9D2FEF1C56C115DE11BB /* GooglePlaces.bundle */,
+				1C6200385182862E9168588E60B1CD37 /* GoogleMaps.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		75EF89C2928DD1534E3030C4CC087FF9 /* HandySwift */ = {
+		34B06520E6260C9C409CE96781033F22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FDB071AA1AA18737E153D2186075C8BC /* ArrayExtension.swift */,
-				1B1F059897EE1E13F38EAF86212DB62A /* CharacterViewExtension.swift */,
-				82B52B4E3359AD6129C60535D8BF5D59 /* DictionaryExtension.swift */,
-				01CF420E27ECDB16A6AED21712AC9690 /* DispatchTimeIntervalExtension.swift */,
-				1F6DEDCD7A1E2A25A9885F3BDCB04897 /* FrequencyTable.swift */,
-				B0A0B000F8180ECF86F51DED4E02A8C3 /* Globals.swift */,
-				61705AA5A82A8221E07466F0A5A0AACF /* IntegerTypeExtension.swift */,
-				6CC2001C4F6E3EAD9820FDAD02448535 /* IntExtension.swift */,
-				4B673A93CD965C663F702977EAE9DF20 /* SortedArray.swift */,
-				DC754C3F77C031D69891A28E4194B8D5 /* StringExtension.swift */,
-				3AF8CDD82382CCCCDE6B9D0C2ECBA9CC /* TimeIntervalExtension.swift */,
-				A33183B3ED68C1BC6E81FBAAC4BD864D /* Support Files */,
+				AA6B5C52CE863A806EFDE431D52D5632 /* Pods_Autonomous_Vehicle_App.framework */,
+				EF62EBCEF1E8640B6E83FB52E24B591A /* Pods_Autonomous_Vehicle_AppTests.framework */,
+				C6CB06DFB81AB2D4969CCC76E7EFF86C /* Pods_Autonomous_Vehicle_AppUITests.framework */,
 			);
-			name = HandySwift;
-			path = HandySwift;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		75F62BE7EFFDC3E0131E599F380A04A7 /* GooglePlaces */ = {
+		385FA015FFB9210F372AB1078B856AAB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				438840F0F9953AC3C76ADC16D78B6AC8 /* Frameworks */,
-				745C994F26D293D8BA054E40B7486815 /* Resources */,
+				26C94CF6FBD559155351548F2127E7DB /* GoogleMaps */,
+				00B63D9B3EBC8ECAFD5DA8C24F1A42DF /* GooglePlaces */,
 			);
-			name = GooglePlaces;
-			path = GooglePlaces;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		475420FA59EFC8377CF994A338979247 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70324FDF1FBB41BEA92DE76E00BD3E96 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		488E301C4ACDDA928635C4886F5F6158 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				82CE66B3B7EC3F6274BF43A52FEEAE6E /* Frameworks */,
+				343584E22C57489C672A8E6F731CB43A /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		4CFA8C2E94378AFFDBA3DF92FBE7E3DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B22C69ADCE7C9D529F11B17B4EF5E065 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				C4E9A3B88AE5C2C64284DDE340C77B2F /* Frameworks */,
-				272AE5476F30A1B6BDE65BDDE1E1D6A9 /* Pods */,
-				C4C565A51F5373992A54135B23DB4DA2 /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				385FA015FFB9210F372AB1078B856AAB /* Pods */,
+				34B06520E6260C9C409CE96781033F22 /* Products */,
 				2E9B387F5819EB0A368847BE285438AC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		866701ACDB7F91D6C8F17D75A829E098 /* CSVImporter */ = {
+		82CE66B3B7EC3F6274BF43A52FEEAE6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2483462C7109EA43050E14B85AF7DF37 /* CSVImporter.swift */,
-				4FE63DA5102E3D8C10384CADA7F97BED /* FileSource.swift */,
-				823126C9B790323365468749C7751C77 /* Source.swift */,
-				41492A48E1AC8FB60C45996071D4D66C /* StringSource.swift */,
-				A1577A06E3BC0A87BA75C8D6E96D23DD /* TextFile.swift */,
-				CE0D7D0306A5040FD66F8CBF8AD8487F /* Support Files */,
-			);
-			name = CSVImporter;
-			path = CSVImporter;
-			sourceTree = "<group>";
-		};
-		A33183B3ED68C1BC6E81FBAAC4BD864D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9694F47BB3EFF4CBF280ABFB1CD809E9 /* HandySwift.modulemap */,
-				E43DFB9B434781A3489AE6A489001183 /* HandySwift.xcconfig */,
-				B51282F11D0F58EC7DFAD55272460FC2 /* HandySwift-dummy.m */,
-				D4728B120D08570A67E15B04D07458B1 /* HandySwift-prefix.pch */,
-				8C929FE579A7BE882A486679280A8546 /* HandySwift-umbrella.h */,
-				5332F06A47C6FBBDCE1CAE4A217B8CB5 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HandySwift";
-			sourceTree = "<group>";
-		};
-		C4C565A51F5373992A54135B23DB4DA2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C4B8B5DAF5A80C85D51F4DF01E01FF64 /* CSVImporter.framework */,
-				49F5EA97DE5DA730CED8CE3D32B99796 /* HandySwift.framework */,
-				907EA76405398986EA60FCA27CDD9B46 /* Pods_Autonomous_Vehicle_App.framework */,
-				DBD286A2A11A143F1EA10F576BEAC7DA /* Pods_Autonomous_Vehicle_AppTests.framework */,
-				AB5CFCAE19EB37CDBF1557C90AA0E2A3 /* Pods_Autonomous_Vehicle_AppUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C4E9A3B88AE5C2C64284DDE340C77B2F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AC7DD64DAE6EDA3ECF68760361CF8788 /* HandySwift.framework */,
-				4CA2CD2D201901BA09AB8C3DD6E7DC70 /* iOS */,
+				08F1229163C7F5E61C7C4B361510F11C /* GoogleMaps.framework */,
+				A92DFDA40F47C0FD221B2872C31099A1 /* GoogleMapsCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE0D7D0306A5040FD66F8CBF8AD8487F /* Support Files */ = {
+		B2F22323EA3B1ADB4F96376E3F709A68 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				8CDC840A2E3F721CC5D0006699A2DB34 /* CSVImporter.modulemap */,
-				73300EF53C089C8C5C4BD617792F901F /* CSVImporter.xcconfig */,
-				85DCAC9939E5A8F6B601C20FFF899A05 /* CSVImporter-dummy.m */,
-				6C49D1E9C05B7798CD4408F403ED6147 /* CSVImporter-prefix.pch */,
-				3D5D097FD055DD2BCEA1E95B7E51D11A /* CSVImporter-umbrella.h */,
-				B202305AA3DCF27B929ABB4B81C45CEB /* Info.plist */,
+				4CFA8C2E94378AFFDBA3DF92FBE7E3DC /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CSVImporter";
+			name = Base;
 			sourceTree = "<group>";
 		};
-		D461EA094E234059CC129AF1AF515585 /* Frameworks */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DE4D931F49F68AE481DB6B24A6607BF /* GoogleMaps.framework */,
-				ABBD79C820F61FE7B7E4C87D0840808C /* GoogleMapsCore.framework */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		DFC2CFC4327F3AFD0104364B45E162DE /* Pods-Autonomous Vehicle App */ = {
@@ -378,14 +240,6 @@
 			);
 			name = "Pods-Autonomous Vehicle App";
 			path = "Target Support Files/Pods-Autonomous Vehicle App";
-			sourceTree = "<group>";
-		};
-		EB809760FCA6AE0AE08BF26477F12B5F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BA53EE18422DD7E94106BFF96B16BC57 /* GoogleMaps.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		EC0FC7C803054A7A58CC3A73F062143A /* Pods-Autonomous Vehicle AppUITests */ = {
@@ -424,30 +278,14 @@
 			path = "Target Support Files/Pods-Autonomous Vehicle AppTests";
 			sourceTree = "<group>";
 		};
-		F9C62A619448BA8C5FACE691A55231D2 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				FE8F7E0057E447771F47D8361D673ABE /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		FE8F7E0057E447771F47D8361D673ABE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				25B200AA1F9CFBA54DAB4535241CD3BD /* GoogleMapsBase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7DBC362A222F8301B5F8E72C7249BD82 /* Headers */ = {
+		061F8127F9ECA054814AE6B18F868C8F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCB5ED23AF9215B44B383048FDDEA7C2 /* HandySwift-umbrella.h in Headers */,
+				245B4DA15E7C432D6BBF4BC392B3464A /* Pods-Autonomous Vehicle App-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,22 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				457F126895DC106790A534C8B08EE758 /* Pods-Autonomous Vehicle AppTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B56DB62EEFEA4386714CE18521694898 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6CE84D44C5AF4FF0BA9A2EC5F270377D /* Pods-Autonomous Vehicle App-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB86DD60FB1DEA15FE08B7D2E53D2676 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33AD0EA5E7F3134B1FB27FB9394BAEB9 /* CSVImporter-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,61 +322,24 @@
 			);
 			name = "Pods-Autonomous Vehicle AppTests";
 			productName = "Pods-Autonomous Vehicle AppTests";
-			productReference = DBD286A2A11A143F1EA10F576BEAC7DA /* Pods_Autonomous_Vehicle_AppTests.framework */;
+			productReference = EF62EBCEF1E8640B6E83FB52E24B591A /* Pods_Autonomous_Vehicle_AppTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		09F03AEBECA3F26FA985C2B238B2C610 /* CSVImporter */ = {
+		8B6C669C5BD5DF1F082AEA9FBE45CFAD /* Pods-Autonomous Vehicle App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8984A623A6ECF81D46F8A8E080FCB12 /* Build configuration list for PBXNativeTarget "CSVImporter" */;
+			buildConfigurationList = 7CEA98A49B42A145969BFC2D0D440F47 /* Build configuration list for PBXNativeTarget "Pods-Autonomous Vehicle App" */;
 			buildPhases = (
-				C34B9EF50166F8607E0F4DCCB73D8F04 /* Sources */,
-				7D3E08C22169D047B1C32DB0E5029623 /* Frameworks */,
-				BB86DD60FB1DEA15FE08B7D2E53D2676 /* Headers */,
+				D150651852049A86116DDD45D7FF55CD /* Sources */,
+				813C61FAFE93BB39BD5C1E77CF8A3986 /* Frameworks */,
+				061F8127F9ECA054814AE6B18F868C8F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E90893D6720EF2FAFD34D9DCC659DE66 /* PBXTargetDependency */,
-			);
-			name = CSVImporter;
-			productName = CSVImporter;
-			productReference = C4B8B5DAF5A80C85D51F4DF01E01FF64 /* CSVImporter.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		0A7FCE80BF44AD59375A9327BC28866E /* Pods-Autonomous Vehicle App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CB75ADAC22C2C8C18A9094A1A4598BD /* Build configuration list for PBXNativeTarget "Pods-Autonomous Vehicle App" */;
-			buildPhases = (
-				4556101397ED42D86B641E67DC7797F3 /* Sources */,
-				60617FCE910A0E3E5A5B04615D79DFA8 /* Frameworks */,
-				B56DB62EEFEA4386714CE18521694898 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2B76CF57A0BD12F78C0AD8CC31686AC3 /* PBXTargetDependency */,
-				87B98435CC2608FC1CE38A730EC8F999 /* PBXTargetDependency */,
 			);
 			name = "Pods-Autonomous Vehicle App";
 			productName = "Pods-Autonomous Vehicle App";
-			productReference = 907EA76405398986EA60FCA27CDD9B46 /* Pods_Autonomous_Vehicle_App.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		15A476D24007C2CD4BE89E820E9140AA /* HandySwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 370DACA1A1DDF71A740C8CFCDF4DBEAB /* Build configuration list for PBXNativeTarget "HandySwift" */;
-			buildPhases = (
-				400F5F73CEDED732BCA3FD4407F41E00 /* Sources */,
-				6B8B0F2E0258EBAC42FB0DE896782EFB /* Frameworks */,
-				7DBC362A222F8301B5F8E72C7249BD82 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HandySwift;
-			productName = HandySwift;
-			productReference = 49F5EA97DE5DA730CED8CE3D32B99796 /* HandySwift.framework */;
+			productReference = AA6B5C52CE863A806EFDE431D52D5632 /* Pods_Autonomous_Vehicle_App.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C27A2216E08FE3FF6083E875A735CB6A /* Pods-Autonomous Vehicle AppUITests */ = {
@@ -571,7 +356,7 @@
 			);
 			name = "Pods-Autonomous Vehicle AppUITests";
 			productName = "Pods-Autonomous Vehicle AppUITests";
-			productReference = AB5CFCAE19EB37CDBF1557C90AA0E2A3 /* Pods_Autonomous_Vehicle_AppUITests.framework */;
+			productReference = C6CB06DFB81AB2D4969CCC76E7EFF86C /* Pods_Autonomous_Vehicle_AppUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -591,13 +376,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C4C565A51F5373992A54135B23DB4DA2 /* Products */;
+			productRefGroup = 34B06520E6260C9C409CE96781033F22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09F03AEBECA3F26FA985C2B238B2C610 /* CSVImporter */,
-				15A476D24007C2CD4BE89E820E9140AA /* HandySwift */,
-				0A7FCE80BF44AD59375A9327BC28866E /* Pods-Autonomous Vehicle App */,
+				8B6C669C5BD5DF1F082AEA9FBE45CFAD /* Pods-Autonomous Vehicle App */,
 				067D590760B478EE6D20E73297B526CA /* Pods-Autonomous Vehicle AppTests */,
 				C27A2216E08FE3FF6083E875A735CB6A /* Pods-Autonomous Vehicle AppUITests */,
 			);
@@ -605,33 +388,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		400F5F73CEDED732BCA3FD4407F41E00 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				35E320570275B8C747DC5834D446C8F0 /* ArrayExtension.swift in Sources */,
-				8130CF29D677DE4B381A6F984F4C756C /* CharacterViewExtension.swift in Sources */,
-				6F27AD337DD1797ECB04ADF8F302FB3F /* DictionaryExtension.swift in Sources */,
-				E4B531F8EA2FABC3B9F3F956C3E38AA4 /* DispatchTimeIntervalExtension.swift in Sources */,
-				51CD75DE442268DE6EDFB9640379690E /* FrequencyTable.swift in Sources */,
-				68AEEB1B4B2D93AC52987FA44AD54D08 /* Globals.swift in Sources */,
-				0A876AFBB3AC01BC8AC9B37C3F0093F7 /* HandySwift-dummy.m in Sources */,
-				DB91EF9EAC8D1F36FF35AFCC617A44B5 /* IntegerTypeExtension.swift in Sources */,
-				044153340EB18AA2B4589A197C0956EA /* IntExtension.swift in Sources */,
-				DA1AE64CB0FC928DA0F629AF1572D1B2 /* SortedArray.swift in Sources */,
-				5E4C01D065DBB69D34DAA5320B97FD60 /* StringExtension.swift in Sources */,
-				C511030CA780AF91626D0E56865E8D11 /* TimeIntervalExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4556101397ED42D86B641E67DC7797F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6CAEE99852BBA1D63630457B7F48F806 /* Pods-Autonomous Vehicle App-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7F64052CE0D8C2E45C446AB1FBC14403 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,16 +396,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C34B9EF50166F8607E0F4DCCB73D8F04 /* Sources */ = {
+		D150651852049A86116DDD45D7FF55CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8797DADEC1F90FF1DF64CECEE6D1A5E8 /* CSVImporter-dummy.m in Sources */,
-				4C055AD9B5F0F6563AD96144DDD6EC22 /* CSVImporter.swift in Sources */,
-				8FA495C5F9F060C0B03978C9A4150BE6 /* FileSource.swift in Sources */,
-				C89DF47439575181BA4655FA58356583 /* Source.swift in Sources */,
-				A66C92A37A7980A202EBE9D5DC76B4BE /* StringSource.swift in Sources */,
-				F809DF0A6AEAC6DFE1AE71BAA5643B5E /* TextFile.swift in Sources */,
+				B366F5752FDA35DE1DC83AC96D515E13 /* Pods-Autonomous Vehicle App-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,28 +414,39 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		2B76CF57A0BD12F78C0AD8CC31686AC3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CSVImporter;
-			target = 09F03AEBECA3F26FA985C2B238B2C610 /* CSVImporter */;
-			targetProxy = 1E6D768288C3B27C3CE0939B89EFB662 /* PBXContainerItemProxy */;
-		};
-		87B98435CC2608FC1CE38A730EC8F999 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HandySwift;
-			target = 15A476D24007C2CD4BE89E820E9140AA /* HandySwift */;
-			targetProxy = 44D7026D076B1E0365948B6CC77742F4 /* PBXContainerItemProxy */;
-		};
-		E90893D6720EF2FAFD34D9DCC659DE66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HandySwift;
-			target = 15A476D24007C2CD4BE89E820E9140AA /* HandySwift */;
-			targetProxy = 9B24D297B5B3ADB1B331D2416C85DF4B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
+		03F9FBCB01CC6E5793BBDD544D5F4CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC03D1777DE1FB3CD5661982689C2C2 /* Pods-Autonomous Vehicle App.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Autonomous Vehicle App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Autonomous Vehicle App/Pods-Autonomous Vehicle App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Autonomous_Vehicle_App;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		39C5BC78A31CDE101068C530CAC7FA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -744,40 +506,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		40CF8ED2C0AAEB128B8D141D669D4292 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6421F507953656C4EBF1CD87C60E464 /* Pods-Autonomous Vehicle App.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Autonomous Vehicle App/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Autonomous Vehicle App/Pods-Autonomous Vehicle App.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Autonomous_Vehicle_App;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		415ACDE72DAE0600CBFAFFAF1F0940AF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -844,9 +572,9 @@
 			};
 			name = Debug;
 		};
-		5F1B6C393DEEB24CCB3F4895FDF9DA13 /* Debug */ = {
+		5E858C15030E0C60E332CDA6C2119CDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AC03D1777DE1FB3CD5661982689C2C2 /* Pods-Autonomous Vehicle App.debug.xcconfig */;
+			baseConfigurationReference = F6421F507953656C4EBF1CD87C60E464 /* Pods-Autonomous Vehicle App.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -870,76 +598,12 @@
 				PRODUCT_NAME = Pods_Autonomous_Vehicle_App;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		686FD318BE2939AF6D8C100FF1021608 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E43DFB9B434781A3489AE6A489001183 /* HandySwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HandySwift/HandySwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HandySwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HandySwift/HandySwift.modulemap";
-				PRODUCT_NAME = HandySwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		78F9239775C2F4AEB2B500A1106C8703 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73300EF53C089C8C5C4BD617792F901F /* CSVImporter.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CSVImporter/CSVImporter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CSVImporter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CSVImporter/CSVImporter.modulemap";
-				PRODUCT_NAME = CSVImporter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -993,38 +657,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		9F75F7940A21FD8621A11A578C486E55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73300EF53C089C8C5C4BD617792F901F /* CSVImporter.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CSVImporter/CSVImporter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CSVImporter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CSVImporter/CSVImporter.modulemap";
-				PRODUCT_NAME = CSVImporter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1093,37 +725,6 @@
 			};
 			name = Release;
 		};
-		F3CB1AEEF7DC9322388B65D18C0C0D1D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E43DFB9B434781A3489AE6A489001183 /* HandySwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HandySwift/HandySwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HandySwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HandySwift/HandySwift.modulemap";
-				PRODUCT_NAME = HandySwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1136,20 +737,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370DACA1A1DDF71A740C8CFCDF4DBEAB /* Build configuration list for PBXNativeTarget "HandySwift" */ = {
+		7CEA98A49B42A145969BFC2D0D440F47 /* Build configuration list for PBXNativeTarget "Pods-Autonomous Vehicle App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3CB1AEEF7DC9322388B65D18C0C0D1D /* Debug */,
-				686FD318BE2939AF6D8C100FF1021608 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CB75ADAC22C2C8C18A9094A1A4598BD /* Build configuration list for PBXNativeTarget "Pods-Autonomous Vehicle App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F1B6C393DEEB24CCB3F4895FDF9DA13 /* Debug */,
-				40CF8ED2C0AAEB128B8D141D669D4292 /* Release */,
+				03F9FBCB01CC6E5793BBDD544D5F4CAB /* Debug */,
+				5E858C15030E0C60E332CDA6C2119CDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1168,15 +760,6 @@
 			buildConfigurations = (
 				45051F5936605EF5EBE3905C49ABB72A /* Debug */,
 				415ACDE72DAE0600CBFAFFAF1F0940AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D8984A623A6ECF81D46F8A8E080FCB12 /* Build configuration list for PBXNativeTarget "CSVImporter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				78F9239775C2F4AEB2B500A1106C8703 /* Debug */,
-				9F75F7940A21FD8621A11A578C486E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
