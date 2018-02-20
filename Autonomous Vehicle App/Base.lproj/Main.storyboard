@@ -115,7 +115,7 @@
         <!--Sensor View-->
         <scene sceneID="7OE-sK-OpA">
             <objects>
-                <viewController title="Sensor View" id="UUP-0N-VaR" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SensorViewController" title="Sensor View" id="UUP-0N-VaR" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7mw-UR-K8b">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,6 +352,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Go To" id="sMe-aC-B7g">
                         <barButtonItem key="leftBarButtonItem" title="menu" image="menu" id="6TQ-Le-Poq"/>
+                        <barButtonItem key="rightBarButtonItem" title="refresh" image="refresh" id="yUQ-nP-VmO">
+                            <connections>
+                                <action selector="refreshViewButton:" destination="viU-Nj-5rQ" id="UgK-x7-gT9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -748,6 +753,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sensor View" id="7wm-0b-wtH">
                         <barButtonItem key="leftBarButtonItem" title="menu" image="menu" id="985-MR-zq9"/>
+                        <barButtonItem key="rightBarButtonItem" title="refresh" image="refresh" id="Qa7-wV-aaD">
+                            <connections>
+                                <action selector="refreshViewButton:" destination="240-TJ-DEC" id="y3c-Wr-Ojb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -951,6 +961,7 @@
         <image name="location" width="24" height="24"/>
         <image name="map" width="30" height="30"/>
         <image name="menu" width="24" height="24"/>
+        <image name="refresh" width="36" height="36"/>
         <image name="sensor_01" width="72" height="72"/>
         <image name="sensor_02" width="72" height="72"/>
         <image name="sensor_03" width="72" height="72"/>
@@ -961,6 +972,6 @@
         <image name="xlabs-logo" width="927" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PmG-hq-ufo"/>
+        <segue reference="BvX-Cp-Nh9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,14 @@ class SensorViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem?
     
+    @IBAction func refreshViewButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sensorViewController = storyboard.instantiateViewController(withIdentifier: "SensorViewController") as UIViewController
+        
+        self.present(sensorViewController, animated:false, completion:nil)
+        print("view refreshed")
+    }
+    
     @IBOutlet weak var statusSensor_01: UILabel!
     @IBOutlet weak var statusSensor_02: UILabel!
     @IBOutlet weak var statusSensor_03: UILabel!
@@ -18,12 +26,19 @@ class SensorViewController: UIViewController {
     @IBOutlet weak var statusSensor_05: UILabel!
     @IBOutlet weak var statusSensor_06: UILabel!
     
+    //the json file url
+    let mockApiURL = "https://d2d8164e-baeb-48cd-9f47-d974783abdc4.mock.pstmn.io/V1/";
+    
+    //A string array to save all the names
+    var nameArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //loading functions
         sideMenus()
         customizeNavBar()
+        getJsonFromUrl()
         displaySensorData()
     }
     
@@ -35,6 +50,40 @@ class SensorViewController: UIViewController {
     //Cut Off button onClick functions
     @IBAction func cutOffButton(_ sender: UIButton) {
         cutOffAlert()
+    }
+    
+    //this function is fetching the json from URL
+    func getJsonFromUrl(){
+        //creating a NSURL
+        let url = NSURL(string: mockApiURL + "sensors")
+        
+        //fetching the data from the url
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                
+                //printing the json in console
+                print(jsonObj!.value(forKey: "sensors")!)
+                
+                //getting the avengers tag array from json and converting it to NSArray
+                if let sensorsArray = jsonObj!.value(forKey: "sensors") as? NSArray {
+                    //looping through all the elements
+                    for sensor in sensorsArray{
+                        
+                        //converting the element to a dictionary
+                        if let sensorDict = sensor as? NSDictionary {
+                            
+                            //getting the name from the dictionary
+                            if let value = sensorDict.value(forKey: "name") {
+                                
+                                //adding the name to the array
+                                self.nameArray.append((value as? String)!)
+                            }
+                        }
+                    }
+                }
+            }
+        }).resume()
     }
     
     //function to display sensor data

@@ -11,6 +11,14 @@ class GoToViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem?
     
+    @IBAction func refreshViewButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
+        
+        self.present(goToViewController, animated:false, completion:nil)
+        print("view refreshed")
+    }
+    
     //the json file url
     let mockApiURL = "https://d2d8164e-baeb-48cd-9f47-d974783abdc4.mock.pstmn.io/V1/";
     
@@ -118,9 +126,7 @@ class GoToViewController: UIViewController {
         let alert = UIAlertController(title: "Go to this destination?", message: "The vehicle will drive itself to your chosen destination", preferredStyle: .alert)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
         let mapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! SWRevealViewController
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         alert.addAction(UIAlertAction(title: "Go", style: .default, handler: { (action) in
             if buttonNo == 1 {
