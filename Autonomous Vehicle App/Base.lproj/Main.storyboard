@@ -415,7 +415,7 @@
                                                 <rect key="frame" x="72" y="0.0" width="656" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPK-OO-DqW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="23.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Battery">
                                                                 <attributes>
@@ -427,16 +427,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUs-p9-Y1Y">
-                                                        <rect key="frame" x="0.0" y="51.5" width="656" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="23.5" width="656" height="48.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wt-CC-sTe">
-                                                                <rect key="frame" x="0.0" y="0.0" width="614" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhg-XA-OGl">
-                                                                <rect key="frame" x="614" y="0.0" width="42" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhg-XA-OGl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="656" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -461,7 +461,7 @@
                                                 <rect key="frame" x="72" y="0.0" width="656" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAm-67-kBV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="23.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="GPS">
                                                                 <attributes>
@@ -473,16 +473,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-gU-JCU">
-                                                        <rect key="frame" x="0.0" y="51.5" width="656" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="23.5" width="656" height="48.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6h-KZ-exe">
-                                                                <rect key="frame" x="0.0" y="0.0" width="614" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zK0-Oz-nta">
-                                                                <rect key="frame" x="614" y="0.0" width="42" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zK0-Oz-nta">
+                                                                <rect key="frame" x="0.0" y="0.0" width="656" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -507,7 +507,7 @@
                                                 <rect key="frame" x="72" y="0.0" width="656" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-mU-rwh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="23.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Velodyne VLP-16 3-D Lidar">
                                                                 <attributes>
@@ -519,16 +519,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5D1-Ry-r8y">
-                                                        <rect key="frame" x="0.0" y="51.5" width="656" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="23.5" width="656" height="48.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDI-7b-irB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="614" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkS-ep-Sdg">
-                                                                <rect key="frame" x="614" y="0.0" width="42" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkS-ep-Sdg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="656" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -553,7 +553,7 @@
                                                 <rect key="frame" x="72" y="0.0" width="656" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrG-ml-LaO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="23.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Lightware SF40/C Lidar">
                                                                 <attributes>
@@ -565,16 +565,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZW-rq-e4k">
-                                                        <rect key="frame" x="0.0" y="51.5" width="656" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="23.5" width="656" height="48.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8c-nB-NgD">
-                                                                <rect key="frame" x="0.0" y="0.0" width="614" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8Y-Vf-qao">
-                                                                <rect key="frame" x="614" y="0.0" width="42" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8Y-Vf-qao">
+                                                                <rect key="frame" x="0.0" y="0.0" width="656" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -599,7 +599,7 @@
                                                 <rect key="frame" x="72" y="0.0" width="656" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPd-mZ-VJl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="23.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="RPLIDAR A1">
                                                                 <attributes>
@@ -611,16 +611,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpv-I5-qaO">
-                                                        <rect key="frame" x="0.0" y="51.5" width="656" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="23.5" width="656" height="48.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wk4-Yf-d4C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="614" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-9o-7Uw">
-                                                                <rect key="frame" x="614" y="0.0" width="42" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEp-9o-7Uw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="656" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -645,7 +645,7 @@
                                                 <rect key="frame" x="72" y="0.0" width="656" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp2-pp-nvZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="23.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Stereo Labs ZED Stereoscopic Camera">
                                                                 <attributes>
@@ -657,16 +657,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OqR-dI-dob">
-                                                        <rect key="frame" x="0.0" y="51.5" width="656" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="23.5" width="656" height="48.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Status: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxo-4k-lUL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="614" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMV-7N-ORG">
-                                                                <rect key="frame" x="614" y="0.0" width="42" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMV-7N-ORG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="656" height="48.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>

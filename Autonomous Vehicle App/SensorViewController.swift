@@ -39,7 +39,6 @@ class SensorViewController: UIViewController {
         sideMenus()
         customizeNavBar()
         getJsonFromUrl()
-        displaySensorData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,33 +66,17 @@ class SensorViewController: UIViewController {
                 
                 //getting the avengers tag array from json and converting it to NSArray
                 if let sensorsArray = jsonObj!.value(forKey: "sensors") as? NSArray {
-                    //looping through all the elements
-                    for sensor in sensorsArray{
-                        
-                        //converting the element to a dictionary
-                        if let sensorDict = sensor as? NSDictionary {
-                            
-                            //getting the name from the dictionary
-                            if let value = sensorDict.value(forKey: "name") {
-                                
-                                //adding the name to the array
-                                self.nameArray.append((value as? String)!)
-                            }
-                        }
-                    }
+                    let sensorValues = sensorsArray.value(forKeyPath: "value.name") as! NSArray
+                    
+                    self.statusSensor_01?.text = sensorValues[0] as? String
+                    self.statusSensor_02?.text = sensorValues[1] as? String
+                    self.statusSensor_03?.text = sensorValues[2] as? String
+                    self.statusSensor_04?.text = sensorValues[3] as? String
+                    self.statusSensor_05?.text = sensorValues[4] as? String
+                    self.statusSensor_06?.text = sensorValues[5] as? String
                 }
             }
         }).resume()
-    }
-    
-    //function to display sensor data
-    func displaySensorData() {
-        self.statusSensor_01?.text = "37V"
-        self.statusSensor_02?.text = "Good"
-        self.statusSensor_03?.text = "Good"
-        self.statusSensor_04?.text = "Good"
-        self.statusSensor_05?.text = "Good"
-        self.statusSensor_06?.text = "Good"
     }
     
     //function that displays cut off alert
