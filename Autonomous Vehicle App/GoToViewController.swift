@@ -12,7 +12,7 @@ class GoToViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem?
     
     //the json file url
-    let URL_LOCATIONS = "http://educ.jmu.edu/~gilliabb/Inbox/locations.json";
+    let mockApiURL = "https://d2d8164e-baeb-48cd-9f47-d974783abdc4.mock.pstmn.io/V1/";
     
     //A string array to save all the names
     var nameArray = [String]()
@@ -39,7 +39,7 @@ class GoToViewController: UIViewController {
     //this function is fetching the json from URL
     func getJsonFromUrl(){
         //creating a NSURL
-        let url = NSURL(string: URL_LOCATIONS)
+        let url = NSURL(string: mockApiURL + "locations")
         
         //fetching the data from the url
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
@@ -83,7 +83,7 @@ class GoToViewController: UIViewController {
         
         for name in nameArray{
             
-            let toGoButton = UIButton(frame: CGRect(x: 0, y: toGoButtonHeight, width: 320, height: 48))
+            let toGoButton = UIButton(frame: CGRect(x: 0, y: toGoButtonHeight, width: 770, height: 48))
             toGoButton.setTitle(name, for: .normal)
             toGoButton.contentHorizontalAlignment = .left
             toGoButton.titleEdgeInsets.left = 20
