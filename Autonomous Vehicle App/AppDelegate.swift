@@ -6,19 +6,13 @@
 //
 
 import UIKit
-import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let gmapsApiKey: String = try! String(contentsOfFile: Bundle.main.path(forResource: "gmaps-api-key", ofType: "txt")!)
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        GMSServices.provideAPIKey("\(gmapsApiKey)")
-        //GMSPlacesClient.provideAPIKey("\(gmapsApiKey)")
         return true
     }
 

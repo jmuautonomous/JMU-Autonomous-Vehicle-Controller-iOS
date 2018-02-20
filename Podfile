@@ -8,9 +8,6 @@ target 'Autonomous Vehicle App' do
 
   # Pods for Autonomous Vehicle App
 
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
-
   target 'Autonomous Vehicle AppTests' do
     inherit! :search_paths
     # Pods for testing
