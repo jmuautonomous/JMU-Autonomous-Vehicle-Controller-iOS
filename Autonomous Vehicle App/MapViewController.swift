@@ -7,7 +7,6 @@
 
 import UIKit
 import MapKit
-import GoogleMaps
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -43,7 +42,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         sideMenus()
         customizeNavBar()
         onLoadMapView()
-        googleMapsTest()
         //mapPolylineView(buttonNo: 2)
     }
     
@@ -181,39 +179,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.present(alert, animated: true)
         }
-    
-    func googleMapsTest() {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate 38.431928,-78.875965 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: 38.431928, longitude: -78.875965, zoom: 6.0)
-        let gmapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = gmapView
-        
-        // Creates a marker in the center of the map.
-        let jmuXlabsLocationMarker = GMSMarker()
-        jmuXlabsLocationMarker.position = CLLocationCoordinate2D(latitude: 38.431928, longitude: -78.875965)
-        jmuXlabsLocationMarker.title = "JMU X-Labs"
-        jmuXlabsLocationMarker.snippet = "Lakeview Hall 1150"
-        jmuXlabsLocationMarker.map = gmapView
-        
-        let jmuFestivalLocationMarker = GMSMarker()
-        jmuFestivalLocationMarker.position = CLLocationCoordinate2D(latitude: 38.432766, longitude: -78.859402)
-        jmuFestivalLocationMarker.title = "Festival"
-        jmuFestivalLocationMarker.snippet = "Festival Conference Center"
-        jmuFestivalLocationMarker.map = gmapView
-        
-        let jmuMadisonUnionLocationMarker = GMSMarker()
-        jmuMadisonUnionLocationMarker.position = CLLocationCoordinate2D(latitude: 38.437708, longitude: -78.870807)
-        jmuMadisonUnionLocationMarker.title = "Madison Union"
-        jmuMadisonUnionLocationMarker.snippet = "Madison Union"
-        jmuMadisonUnionLocationMarker.map = gmapView
-        
-        let jmuQuadLocationMarker = GMSMarker()
-        jmuQuadLocationMarker.position = CLLocationCoordinate2D(latitude: 38.438833, longitude: -78.874412)
-        jmuQuadLocationMarker.title = "The Quad"
-        jmuQuadLocationMarker.snippet = "The Quad"
-        jmuQuadLocationMarker.map = gmapView
-    }
     
     //function that control side menu interaction
     func sideMenus() {

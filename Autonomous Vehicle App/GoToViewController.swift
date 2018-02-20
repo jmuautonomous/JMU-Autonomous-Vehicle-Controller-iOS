@@ -6,10 +6,8 @@
 //
 
 import UIKit
-import MapKit
-import GoogleMaps
 
-class GoToViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class GoToViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem?
     
@@ -19,21 +17,8 @@ class GoToViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     //A string array to save all the names
     var nameArray = [String]()
     
-    let locationManager = CLLocationManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //requesting user location
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-        
-        //setting desired location accuracy
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
         
         //loading functions
         sideMenus()
@@ -100,6 +85,8 @@ class GoToViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             
             let toGoButton = UIButton(frame: CGRect(x: 0, y: toGoButtonHeight, width: 320, height: 48))
             toGoButton.setTitle(name, for: .normal)
+            toGoButton.contentHorizontalAlignment = .left
+            toGoButton.titleEdgeInsets.left = 20
             toGoButton.setBackgroundImage(UIImage(named: "white"), for: .normal)
             toGoButton.setBackgroundImage(UIImage(named: "highlight"), for: .selected)
             toGoButton.setTitleColor(UIColor.black, for: .normal)
@@ -111,10 +98,6 @@ class GoToViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
     }
     @objc func buttonAction(sender: UIButton) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let mapViewController = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! SWRevealViewController
-        self.present(mapViewController, animated:true, completion:nil)
         goAlert(buttonNo: 1)
     }
     
@@ -136,16 +119,21 @@ class GoToViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
+        let mapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! SWRevealViewController
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         alert.addAction(UIAlertAction(title: "Go", style: .default, handler: { (action) in
             if buttonNo == 1 {
+                self.present(mapViewController, animated:true, completion:nil)
                 MapViewController().mapPolylineView(buttonNo: 1)
             } else if buttonNo == 2 {
+                self.present(mapViewController, animated:true, completion:nil)
                 MapViewController().mapPolylineView(buttonNo: 2)
             } else if buttonNo == 3 {
+                self.present(mapViewController, animated:true, completion:nil)
                 MapViewController().mapPolylineView(buttonNo: 3)
             } else if buttonNo == 4 {
+                self.present(mapViewController, animated:true, completion:nil)
                 MapViewController().mapPolylineView(buttonNo: 4)
             }
             //alert.dismiss(animated: true, completion: nil)
