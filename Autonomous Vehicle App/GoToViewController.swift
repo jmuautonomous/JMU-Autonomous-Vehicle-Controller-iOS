@@ -9,38 +9,9 @@ import UIKit
 import MapKit
 
 class GoToViewController: UIViewController {
-
+    
     @IBOutlet weak var menuButton: UIBarButtonItem?
     @IBOutlet var mapView: MKMapView?
-    
-    @IBAction func addDatabaseButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
-        
-        let addId = "7"
-        let addName = "Test Test".replacingOccurrences(of: " ", with: "_")
-        let addAddress = "Test Test".replacingOccurrences(of: " ", with: "_")
-        let addLat = "34.348764"
-        let addLong = "-78.7654"
-        
-        let addUrl = URL(string: "http://134.126.153.21:8080/addlocation/\(addId)+\(addName)+\(addAddress)+\(addLat)+\(addLong)")
-        
-        var addRequest = URLRequest(url: addUrl!)
-        addRequest.httpMethod = "GET"
-        
-        let addTask = URLSession.shared.dataTask(with: addRequest) { data, response, error in
-            if error != nil {
-                //There was an error
-            } else {
-                //The HTTP request was successful
-                print(String(data: data!, encoding: .utf8)!)
-            }
-        }
-        addTask.resume()
-        
-        self.present(goToViewController, animated:false, completion:nil)
-    }
-    
     
     //the json file url
     let mockApiURL = "http://134.126.153.21:8080/";
@@ -102,6 +73,7 @@ class GoToViewController: UIViewController {
                 
                 //getting the avengers tag array from json and converting it to NSArray
                 if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
+                    
                     //looping through all the elements
                     for location in locationsArray{
                         
@@ -152,6 +124,50 @@ class GoToViewController: UIViewController {
         goAlert(buttonNo: 1)
     }
     
+    @IBAction func addDatabaseButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
+        
+        let url = NSURL(string: mockApiURL + "locations")
+        
+        //fetching the data from the url
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                
+                //printing the json in console
+                print(jsonObj!.value(forKey: "Locations")!)
+                
+                //getting the avengers tag array from json and converting it to NSArray
+                if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
+                    
+                    let addId = String(locationsArray.count + 1)
+                    let addName = "Test Test".replacingOccurrences(of: " ", with: "_")
+                    let addAddress = "Test blvd".replacingOccurrences(of: " ", with: "_")
+                    let addLat = "34.348764"
+                    let addLong = "-78.7654"
+                    
+                    let addUrl = URL(string: "http://134.126.153.21:8080/addlocation/\(addId)+\(addName)+\(addAddress)+\(addLat)+\(addLong)")
+                    
+                    var addRequest = URLRequest(url: addUrl!)
+                    addRequest.httpMethod = "GET"
+                    
+                    let addTask = URLSession.shared.dataTask(with: addRequest) { data, response, error in
+                        if error != nil {
+                            //There was an error
+                        } else {
+                            //The HTTP request was successful
+                            print(String(data: data!, encoding: .utf8)!)
+                        }
+                    }
+                    addTask.resume()
+                    
+                    self.present(goToViewController, animated:false, completion:nil)
+                }
+            }
+        }).resume()
+    }
+    
     //function that displays cut off alert
     func cutOffAlert() {
         let alert = UIAlertController(title: "Cut off vehicle power?", message: "Are you sure you wish to cut off vehicle power?", preferredStyle: .alert)
@@ -192,7 +208,7 @@ class GoToViewController: UIViewController {
         }))
         
         self.present(alert, animated: true)
-        }
+    }
     
     @objc func swipeToRefresh(gesture: UISwipeGestureRecognizer) -> Void {
         if gesture.direction == UISwipeGestureRecognizerDirection.down {
