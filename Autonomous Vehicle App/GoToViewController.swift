@@ -6,27 +6,70 @@
 //
 
 import UIKit
+import MapKit
 
 class GoToViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem?
+    @IBOutlet var mapView: MKMapView?
     
-    @IBAction func refreshViewButton(_ sender: Any) {
+    @IBAction func addDatabaseButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
         
+        let addId = "7"
+        let addName = "Test Test".replacingOccurrences(of: " ", with: "_")
+        let addAddress = "Test Test".replacingOccurrences(of: " ", with: "_")
+        let addLat = "34.348764"
+        let addLong = "-78.7654"
+        
+        let addUrl = URL(string: "http://134.126.153.21:8080/addlocation/\(addId)+\(addName)+\(addAddress)+\(addLat)+\(addLong)")
+        
+        var addRequest = URLRequest(url: addUrl!)
+        addRequest.httpMethod = "GET"
+        
+        let addTask = URLSession.shared.dataTask(with: addRequest) { data, response, error in
+            if error != nil {
+                //There was an error
+            } else {
+                //The HTTP request was successful
+                print(String(data: data!, encoding: .utf8)!)
+            }
+        }
+        addTask.resume()
+        
         self.present(goToViewController, animated:false, completion:nil)
-        print("view refreshed")
     }
     
+    
     //the json file url
-    let mockApiURL = "https://d2d8164e-baeb-48cd-9f47-d974783abdc4.mock.pstmn.io/V1/";
+    let mockApiURL = "http://134.126.153.21:8080/";
     
     //A string array to save all the names
     var nameArray = [String]()
     
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView?.delegate = self as? MKMapViewDelegate
+        mapView?.showsUserLocation = true
+        
+        //requesting user location
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        
+        //setting desired location accuracy
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self as? CLLocationManagerDelegate
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeToRefresh))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
         
         //loading functions
         sideMenus()
@@ -55,10 +98,10 @@ class GoToViewController: UIViewController {
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                 
                 //printing the json in console
-                print(jsonObj!.value(forKey: "locations")!)
+                print(jsonObj!.value(forKey: "Locations")!)
                 
                 //getting the avengers tag array from json and converting it to NSArray
-                if let locationsArray = jsonObj!.value(forKey: "locations") as? NSArray {
+                if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
                     //looping through all the elements
                     for location in locationsArray{
                         
@@ -150,6 +193,17 @@ class GoToViewController: UIViewController {
         
         self.present(alert, animated: true)
         }
+    
+    @objc func swipeToRefresh(gesture: UISwipeGestureRecognizer) -> Void {
+        if gesture.direction == UISwipeGestureRecognizerDirection.down {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
+            
+            self.present(goToViewController, animated:false, completion:nil)
+            print("view refreshed")
+        }
+    }
     
     //function that control side menu interaction
     func sideMenus() {

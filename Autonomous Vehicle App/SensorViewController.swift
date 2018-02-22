@@ -39,6 +39,7 @@ class SensorViewController: UIViewController {
         sideMenus()
         customizeNavBar()
         getJsonFromUrl()
+        scheduledTimerWithTimeInterval()
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +53,7 @@ class SensorViewController: UIViewController {
     }
     
     //this function is fetching the json from URL
-    func getJsonFromUrl(){
+    @objc func getJsonFromUrl(){
         //creating a NSURL
         let url = NSURL(string: mockApiURL + "sensors")
         
@@ -66,17 +67,32 @@ class SensorViewController: UIViewController {
                 
                 //getting the avengers tag array from json and converting it to NSArray
                 if let sensorsArray = jsonObj!.value(forKey: "sensors") as? NSArray {
-                    let sensorValues = sensorsArray.value(forKeyPath: "value.name") as! NSArray
+                    //let sensorValues = sensorsArray.value(forKeyPath: "value.name") as! NSArray
                     
-                    self.statusSensor_01?.text = sensorValues[0] as? String
-                    self.statusSensor_02?.text = sensorValues[1] as? String
-                    self.statusSensor_03?.text = sensorValues[2] as? String
-                    self.statusSensor_04?.text = sensorValues[3] as? String
-                    self.statusSensor_05?.text = sensorValues[4] as? String
-                    self.statusSensor_06?.text = sensorValues[5] as? String
+                    //self.statusSensor_01?.text = sensorValues[0] as? String
+                    //self.statusSensor_02?.text = sensorValues[1] as? String
+                    //self.statusSensor_03?.text = sensorValues[2] as? String
+                    //self.statusSensor_04?.text = sensorValues[3] as? String
+                    //self.statusSensor_05?.text = sensorValues[4] as? String
+                    //self.statusSensor_06?.text = sensorValues[5] as? String
                 }
+                OperationQueue.main.addOperation({
+                    //calling another function after fetching the json
+                    //it will show the names to label
+                    self.displaySensorData()
+                })
             }
         }).resume()
+    }
+    
+    //function to display sensor data
+    func displaySensorData() {
+        self.statusSensor_01?.text = "37V"
+        self.statusSensor_02?.text = "Good"
+        self.statusSensor_03?.text = "Good"
+        self.statusSensor_04?.text = "Good"
+        self.statusSensor_05?.text = "Good"
+        self.statusSensor_06?.text = "Good"
     }
     
     //function that displays cut off alert
@@ -89,6 +105,12 @@ class SensorViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
+    }
+    
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function "getJsonFromUrl" with the interval of 30 seconds
+        var timer = Timer()
+        timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.getJsonFromUrl), userInfo: nil, repeats: true)
     }
     
     //function that control side menu interaction

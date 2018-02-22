@@ -13,12 +13,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var menuButton: UIBarButtonItem?
     @IBOutlet var mapView: MKMapView?
     
-    //the json file url
-    let URL_LOCATIONS = "http://educ.jmu.edu/~gilliabb/Inbox/locations.json";
-    
-    //A string array to save all the names
-    var nameArray = [String]()
-    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
