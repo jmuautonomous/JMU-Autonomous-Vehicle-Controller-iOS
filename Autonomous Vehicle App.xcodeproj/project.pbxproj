@@ -16,6 +16,7 @@
 		D24C5F80203BED9500788229 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C5F7E203BED9500788229 /* SensorViewController.swift */; };
 		D24C5F81203BED9500788229 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C5F7F203BED9500788229 /* MapViewController.swift */; };
 		D24C5F83203BEDA300788229 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C5F82203BEDA300788229 /* AboutViewController.swift */; };
+		D290DE5C204886BA00AC85AF /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290DE5B204886BA00AC85AF /* LocationsViewController.swift */; };
 		D2BC5AF22018197800CC11DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC5AF12018197800CC11DE /* AppDelegate.swift */; };
 		D2BC5AF92018197800CC11DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BC5AF72018197800CC11DE /* Main.storyboard */; };
 		D2BC5AFB2018197800CC11DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BC5AFA2018197800CC11DE /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		D24C5F7E203BED9500788229 /* SensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		D24C5F7F203BED9500788229 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D24C5F82203BEDA300788229 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D290DE5B204886BA00AC85AF /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		D2BC5AEE2018197800CC11DE /* Autonomous Vehicle App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autonomous Vehicle App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC5AF12018197800CC11DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2BC5AF82018197800CC11DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				D2BC5AF12018197800CC11DE /* AppDelegate.swift */,
 				D2BC5AF72018197800CC11DE /* Main.storyboard */,
 				D24C5F7C203BED7A00788229 /* GoToViewController.swift */,
+				D290DE5B204886BA00AC85AF /* LocationsViewController.swift */,
 				D24C5F7F203BED9500788229 /* MapViewController.swift */,
 				D24C5F7E203BED9500788229 /* SensorViewController.swift */,
 				D24C5F82203BEDA300788229 /* AboutViewController.swift */,
@@ -507,6 +510,7 @@
 				D24C5F7D203BED7A00788229 /* GoToViewController.swift in Sources */,
 				D24C5F80203BED9500788229 /* SensorViewController.swift in Sources */,
 				D2BC5AF22018197800CC11DE /* AppDelegate.swift in Sources */,
+				D290DE5C204886BA00AC85AF /* LocationsViewController.swift in Sources */,
 				D203AAA12018FC1C005BF025 /* SWRevealViewController.m in Sources */,
 				D2DAFB8A2019639C00880343 /* MapAnnotation.swift in Sources */,
 				D24C5F83203BEDA300788229 /* AboutViewController.swift in Sources */,
