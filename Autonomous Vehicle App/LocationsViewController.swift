@@ -10,8 +10,6 @@ import MapKit
 
 class LocationsViewController: UIViewController {
     
-    @IBOutlet var mapView: MKMapView?
-    
     //the json file url
     let apiURL = "http://134.126.153.21:8080/";
     
@@ -22,9 +20,6 @@ class LocationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView?.delegate = self as? MKMapViewDelegate
-        mapView?.showsUserLocation = true
         
         //requesting user location
         locationManager.requestAlwaysAuthorization()
@@ -61,10 +56,10 @@ class LocationsViewController: UIViewController {
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                 
                 //printing the json in console
-                print(jsonObj!.value(forKey: "locations")!)
+                print(jsonObj!.value(forKey: "Locations")!)
                 
                 //getting the avengers tag array from json and converting it to NSArray
-                if let locationsArray = jsonObj!.value(forKey: "locations") as? NSArray {
+                if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
                     
                     //looping through all the elements
                     for location in locationsArray{

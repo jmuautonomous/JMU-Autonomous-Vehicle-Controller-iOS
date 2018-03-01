@@ -11,7 +11,6 @@ import MapKit
 class GoToViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem?
-    @IBOutlet var mapView: MKMapView?
     
     //the json file url
     let apiURL = "http://134.126.153.21:8080/";
@@ -23,9 +22,6 @@ class GoToViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView?.delegate = self as? MKMapViewDelegate
-        mapView?.showsUserLocation = true
         
         //requesting user location
         locationManager.requestAlwaysAuthorization()
