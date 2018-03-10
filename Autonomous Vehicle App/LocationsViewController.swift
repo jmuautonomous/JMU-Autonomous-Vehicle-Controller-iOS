@@ -11,7 +11,7 @@ import MapKit
 class LocationsViewController: UIViewController {
     
     //the json file url
-    let apiURL = "http://134.126.153.21:8080/";
+    let apiURL = "http://76.120.201.98:8080/";
     
     //A string array to save all the names
     var nameArray = [String]()

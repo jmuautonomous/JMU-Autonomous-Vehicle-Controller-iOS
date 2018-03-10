@@ -69,14 +69,17 @@ class GoToViewController: UIViewController {
                 
                 //getting the avengers tag array from json and converting it to NSArray
                 if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
+                    let allowedCharacterSet = (CharacterSet(charactersIn: ".-(),&").inverted)
                     
                     let addId = String(locationsArray.count + 1)
                     let addName = "Test Test".replacingOccurrences(of: " ", with: "_")
                     let addAddress = "Test blvd".replacingOccurrences(of: " ", with: "_")
+                    let urlAddName = addName.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)
+                    let urlAddAddress = addAddress.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)
                     let addLat = "34.348764"
                     let addLong = "-78.7654"
                     
-                    let addUrl = URL(string: "http://134.126.153.21:8080/addlocation/\(addId)+\(addName)+\(addAddress)+\(addLat)+\(addLong)")
+                    let addUrl = URL(string: "http://76.120.201.98:8080/addlocation/\(addId)+\(urlAddName)+\(urlAddAddress)+\(addLat)+\(addLong)")
                     
                     var addRequest = URLRequest(url: addUrl!)
                     addRequest.httpMethod = "GET"
