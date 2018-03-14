@@ -36,7 +36,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         sideMenus()
         customizeNavBar()
         onLoadMapView()
-        //mapPolylineView(buttonNo: 2)
+        addMapTrackingButton()
+        //if LocationsViewController != nil {
+        //    mapPolylineView(buttonNo: LocationsViewController.buttonAction(<#T##LocationsViewController#>))
+        //}
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,6 +136,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         renderer.lineWidth = 5.0
         
         return renderer
+    }
+    
+    func addMapTrackingButton(){
+        let image = UIImage(named: "trackme") as UIImage?
+        let button   = UIButton(type: UIButtonType.custom) as UIButton
+        button.frame = CGRect(origin: CGPoint(x:5, y: 25), size: CGSize(width: 35, height: 35))
+        button.setImage(image, for: .normal)
+        button.backgroundColor = .clear
+        button.addTarget(self, action: #selector(MapViewController.centerMapOnUserButtonClicked), for:.touchUpInside)
+        mapView?.addSubview(button)
+    }
+    
+    @objc func centerMapOnUserButtonClicked() {
+        mapView?.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
     }
     
     //function that displays cut off alert

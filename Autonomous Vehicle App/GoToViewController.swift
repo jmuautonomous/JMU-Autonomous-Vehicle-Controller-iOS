@@ -13,7 +13,9 @@ class GoToViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem?
     
     //the json file url
-    let apiURL = "http://134.126.153.21:8080/";
+    struct ApiUrl {
+        static var url = "http://10.0.0.218:8080/";
+    }
     
     //A string array to save all the names
     var nameArray = [String]()
@@ -57,7 +59,7 @@ class GoToViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
         
-        let url = NSURL(string: apiURL + "locations")
+        let url = NSURL(string: ApiUrl.url + "locations")
         
         //fetching the data from the url
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
@@ -69,19 +71,16 @@ class GoToViewController: UIViewController {
                 
                 //getting the avengers tag array from json and converting it to NSArray
                 if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
-                    let allowedCharacterSet = (CharacterSet(charactersIn: ".-(),&").inverted)
                     
                     let addId = String(locationsArray.count + 1)
                     let addName = "Test Test".replacingOccurrences(of: " ", with: "_")
                     let addAddress = "Test blvd".replacingOccurrences(of: " ", with: "_")
-                    let urlAddName = addName.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)
-                    let urlAddAddress = addAddress.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)
                     let addLat = "34.348764"
                     let addLong = "-78.7654"
                     
-                    let addUrl = URL(string: "http://76.120.201.98:8080/addlocation/\(addId)+\(urlAddName)+\(urlAddAddress)+\(addLat)+\(addLong)")
+                    let addUrl = "\(ApiUrl.url)"+"addlocation/\(addId)+\(addName)+\(addAddress)+\(addLat)+\(addLong)"
                     
-                    var addRequest = URLRequest(url: addUrl!)
+                    var addRequest = URLRequest(url: URL(string: addUrl)!)
                     addRequest.httpMethod = "GET"
                     
                     let addTask = URLSession.shared.dataTask(with: addRequest) { data, response, error in

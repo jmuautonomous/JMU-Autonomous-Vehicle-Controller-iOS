@@ -10,11 +10,9 @@ import MapKit
 
 class LocationsViewController: UIViewController {
     
-    //the json file url
-    let apiURL = "http://76.120.201.98:8080/";
-    
     //A string array to save all the names
     var nameArray = [String]()
+    var idArray = [Int]()
     
     let locationManager = CLLocationManager()
     
@@ -48,7 +46,7 @@ class LocationsViewController: UIViewController {
     //this function is fetching the json from URL
     func getJsonFromUrl(){
         //creating a NSURL
-        let url = NSURL(string: apiURL + "locations")
+        let url = NSURL(string: GoToViewController.ApiUrl.url + "locations")
         
         //fetching the data from the url
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
@@ -73,6 +71,13 @@ class LocationsViewController: UIViewController {
                                 //adding the name to the array
                                 self.nameArray.append((name as? String)!)
                             }
+                            
+                            //getting the id from the dictionary
+                            if let id = locationDict.value(forKey: "id") {
+                                
+                                //adding the id to the array
+                                self.idArray.append(id as! Int)
+                            }
                         }
                     }
                 }
@@ -90,11 +95,12 @@ class LocationsViewController: UIViewController {
     func createDynamicButtons() {
         
         var toGoButtonHeight = 0
+        var buttonId: Int = 1
         
-        for name in nameArray{
-            
+        for name in nameArray {
             let toGoButton = UIButton(frame: CGRect(x: 0, y: toGoButtonHeight, width: 770, height: 48))
             toGoButton.setTitle(name, for: .normal)
+            toGoButton.tag = buttonId
             toGoButton.contentHorizontalAlignment = .left
             toGoButton.titleEdgeInsets.left = 20
             toGoButton.setBackgroundImage(UIImage(named: "white"), for: .normal)
@@ -105,10 +111,11 @@ class LocationsViewController: UIViewController {
             toGoButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
             self.view.addSubview(toGoButton)
             toGoButtonHeight = toGoButtonHeight + 47
+            buttonId = buttonId + 1
         }
     }
     @objc func buttonAction(sender: UIButton) {
-        goAlert(buttonNo: 1)
+        goAlert(buttonNo: (sender.tag as? NSNumber)!)
     }
     
     //function that displays go to alert
