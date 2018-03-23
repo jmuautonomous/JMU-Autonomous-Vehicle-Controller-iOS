@@ -37,9 +37,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         customizeNavBar()
         onLoadMapView()
         addMapTrackingButton()
-        //if LocationsViewController != nil {
-        //    mapPolylineView(buttonNo: LocationsViewController.buttonAction(<#T##LocationsViewController#>))
-        //}
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +79,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     //function that controls the display of directions between user location and POI
     func mapPolylineView(buttonNo: NSNumber) {
         let sourceCoordinates = locationManager.location?.coordinate
-        var destCoordinates = jmuFestivalLocation
+        var destCoordinates: CLLocationCoordinate2D?
         
         if buttonNo == 1 {
             destCoordinates = jmuXlabsLocation
@@ -101,7 +98,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         print(destCoordinates)
         
         let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
-        let destPlacemark = MKPlacemark(coordinate: destCoordinates)
+        let destPlacemark = MKPlacemark(coordinate: destCoordinates!)
         
         let sourceItem = MKMapItem(placemark: sourcePlacemark)
         let destItem = MKMapItem(placemark: destPlacemark)

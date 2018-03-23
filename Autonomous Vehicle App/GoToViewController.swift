@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import SystemConfiguration
 
 class GoToViewController: UIViewController {
     
@@ -41,6 +42,7 @@ class GoToViewController: UIViewController {
         self.view.addGestureRecognizer(swipeDown)
         
         //loading functions
+        isConnected()
         sideMenus()
         customizeNavBar()
     }
@@ -61,42 +63,99 @@ class GoToViewController: UIViewController {
         
         let url = NSURL(string: ApiUrl.url + "locations")
         
-        //fetching the data from the url
-        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
-            
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+        if isInternetAvailable() == true {
+            //fetching the data from the url
+            URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
                 
-                //printing the json in console
-                print(jsonObj!.value(forKey: "Locations")!)
-                
-                //getting the avengers tag array from json and converting it to NSArray
-                if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
+                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                     
-                    let addId = String(locationsArray.count + 1)
-                    let addName = "Test Test".replacingOccurrences(of: " ", with: "_")
-                    let addAddress = "Test blvd".replacingOccurrences(of: " ", with: "_")
-                    let addLat = "34.348764"
-                    let addLong = "-78.7654"
+                    //printing the json in console
+                    print(jsonObj!.value(forKey: "Locations")!)
                     
-                    let addUrl = "\(ApiUrl.url)"+"addlocation/\(addId)+\(addName)+\(addAddress)+\(addLat)+\(addLong)"
-                    
-                    var addRequest = URLRequest(url: URL(string: addUrl)!)
-                    addRequest.httpMethod = "GET"
-                    
-                    let addTask = URLSession.shared.dataTask(with: addRequest) { data, response, error in
-                        if error != nil {
-                            //There was an error
-                        } else {
-                            //The HTTP request was successful
-                            print(String(data: data!, encoding: .utf8)!)
+                    //getting the avengers tag array from json and converting it to NSArray
+                    if let locationsArray = jsonObj!.value(forKey: "Locations") as? NSArray {
+                        
+                        let addId = String(locationsArray.count + 1)
+                        let addName = "Test Test".replacingOccurrences(of: " ", with: "_")
+                        let addAddress = "Test blvd".replacingOccurrences(of: " ", with: "_")
+                        let addLat = "34.348764"
+                        let addLong = "-78.7654"
+                        
+                        let addUrl = "\(ApiUrl.url)"+"addlocation/\(addId)+\(addName)+\(addAddress)+\(addLat)+\(addLong)"
+                        
+                        var addRequest = URLRequest(url: URL(string: addUrl)!)
+                        addRequest.httpMethod = "GET"
+                        
+                        let addTask = URLSession.shared.dataTask(with: addRequest) { data, response, error in
+                            if error != nil {
+                                //There was an error
+                            } else {
+                                //The HTTP request was successful
+                                print(String(data: data!, encoding: .utf8)!)
+                            }
                         }
+                        addTask.resume()
+                        
+                        self.present(goToViewController, animated:false, completion:nil)
                     }
-                    addTask.resume()
-                    
-                    self.present(goToViewController, animated:false, completion:nil)
                 }
+            }).resume()
+        } else {
+            let alert = UIAlertController(title: "No Internet Connection", message: "You are not connected to the internet", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Reload", style: .default, handler: { (action) in
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
+                
+                self.present(goToViewController, animated:false, completion:nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in
+                
+            }))
+            
+            self.present(alert, animated: true)
+        }
+    }
+    func isInternetAvailable() -> Bool
+    {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
             }
-        }).resume()
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        print("isReachable: " + String(isReachable))
+        print("needsConnection: " + String(needsConnection))
+        return (isReachable && !needsConnection)
+        
+    }
+    
+    func isConnected() {
+        if isInternetAvailable() != true {
+            let alert = UIAlertController(title: "No Internet Connection", message: "You are not connected to the internet", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Reload", style: .default, handler: { (action) in
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let goToViewController = storyboard.instantiateViewController(withIdentifier: "GoToViewController") as UIViewController
+                
+                self.present(goToViewController, animated:false, completion:nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in
+                
+            }))
+            
+            self.present(alert, animated: true)
+        }
     }
     
     //function that displays cut off alert

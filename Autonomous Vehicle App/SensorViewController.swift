@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SystemConfiguration
 
 class SensorViewController: UIViewController {
-
+    
     @IBOutlet weak var menuButton: UIBarButtonItem?
     
     @IBAction func refreshViewButton(_ sender: Any) {
@@ -57,32 +58,48 @@ class SensorViewController: UIViewController {
         //creating a NSURL
         let url = NSURL(string: mockApiURL + "sensors")
         
-        //fetching the data from the url
-        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
-            
-            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+        if isInternetAvailable() == true {
+            //fetching the data from the url
+            URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
                 
-                //printing the json in console
-                print(jsonObj!.value(forKey: "sensors")!)
-                
-                //getting the avengers tag array from json and converting it to NSArray
-                if let sensorsArray = jsonObj!.value(forKey: "sensors") as? NSArray {
-                    //let sensorValues = sensorsArray.value(forKeyPath: "value.name") as! NSArray
+                if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                     
-                    //self.statusSensor_01?.text = sensorValues[0] as? String
-                    //self.statusSensor_02?.text = sensorValues[1] as? String
-                    //self.statusSensor_03?.text = sensorValues[2] as? String
-                    //self.statusSensor_04?.text = sensorValues[3] as? String
-                    //self.statusSensor_05?.text = sensorValues[4] as? String
-                    //self.statusSensor_06?.text = sensorValues[5] as? String
+                    //printing the json in console
+                    print(jsonObj!.value(forKey: "sensors")!)
+                    
+                    //getting the avengers tag array from json and converting it to NSArray
+                    if let sensorsArray = jsonObj!.value(forKey: "sensors") as? NSArray {
+                        //let sensorValues = sensorsArray.value(forKeyPath: "value.name") as! NSArray
+                        
+                        //self.statusSensor_01?.text = sensorValues[0] as? String
+                        //self.statusSensor_02?.text = sensorValues[1] as? String
+                        //self.statusSensor_03?.text = sensorValues[2] as? String
+                        //self.statusSensor_04?.text = sensorValues[3] as? String
+                        //self.statusSensor_05?.text = sensorValues[4] as? String
+                        //self.statusSensor_06?.text = sensorValues[5] as? String
+                    }
+                    OperationQueue.main.addOperation({
+                        //calling another function after fetching the json
+                        //it will show the names to label
+                        self.displaySensorData()
+                    })
                 }
-                OperationQueue.main.addOperation({
-                    //calling another function after fetching the json
-                    //it will show the names to label
-                    self.displaySensorData()
-                })
-            }
-        }).resume()
+            }).resume()
+        } else {
+            let alert = UIAlertController(title: "No Internet Connection", message: "You are not connected to the internet", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Reload", style: .default, handler: { (action) in
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let sensorViewController = storyboard.instantiateViewController(withIdentifier: "SensorViewController") as UIViewController
+                
+                self.present(sensorViewController, animated:false, completion:nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in
+                
+            }))
+            
+            self.present(alert, animated: true)
+        }
     }
     
     //function to display sensor data
@@ -93,6 +110,26 @@ class SensorViewController: UIViewController {
         self.statusSensor_04?.text = "Good"
         self.statusSensor_05?.text = "Good"
         self.statusSensor_06?.text = "Good"
+    }
+    
+    func isInternetAvailable() -> Bool
+    {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = flags.contains(.reachable)
+        return (isReachable)
     }
     
     //function that displays cut off alert
