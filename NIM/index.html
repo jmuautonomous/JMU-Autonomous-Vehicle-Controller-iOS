@@ -288,11 +288,9 @@ VERSION : 1.1
                   <div class="col-md-12">
                       <h3 class="title">Location Selection</h3>            
                   </div> 
-                   <div class="col-md-8 col-md-offset-2 bold black">
-                      <div class="btn-group" role="group" aria-label="Basic example"></div>
-                  </div>
                 </div>
             </div> 
+            <p id="btn-group"></p>
             <script type="text/javascript">
               var url = "http://10.0.0.218:8080/";
               </script>
@@ -301,16 +299,17 @@ VERSION : 1.1
               document.write('<a href="' + url + '">Link</a>');
               </script>
            <script>
-              var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+              var cars = ["JMU X-Labs", "Festival", "Willson Hall", "Madison Union", "ISAT", "Student Success Cetner"];
               var text = "";
               var i;
               for (i = 0; i < cars.length; i++) {
                 text = cars[i];
                 var btn = document.createElement("BUTTON");        // Create a <button> element
+                var br = document.createElement("br");
                 var t = document.createTextNode(text);       // Create a text node
                 btn.appendChild(t);                                // Append the text to <button>
-                document.body.appendChild(btn);                    // Append <button> to <body>
-              }
+                document.getElementById("btn-group").appendChild(btn);                    // Append <button> to <body>
+                document.getElementById("btn-group").appendChild(br);}
               </script>             
  </section> 
 
