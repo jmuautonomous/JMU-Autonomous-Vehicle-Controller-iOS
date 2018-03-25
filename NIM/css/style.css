@@ -260,11 +260,11 @@ button {
     margin-top: 500px;
     line-height: 50px;
     font-size: 15px;
+    font-weight: bold;
     border-radius: 5px;
 	padding: 0.8em 1.8em;
     background:purple;
-    border-color: goldenrod;
-    
+    border-color: goldenrod;    
   }
 
 /*	PRELOADER
