@@ -1,7 +1,7 @@
 # JMU Autonomous Vehicle Controller (iOS)
 <p align="center">
 	<a href="https://github.com/jmuautonomous/JMU-Autonomous-Vehicle-Controller" rel="nofollow">
-		<img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status">
+		<img src="https://img.shields.io/badge/build-partially%20passing-yellow.svg" alt="Build Status">
 	</a>
 	<a href="https://github.com/jmuautonomous/JMU-Autonomous-Vehicle-Controller/blob/master/LICENSE">
 		<img src="https://img.shields.io/github/license/jmuautonomous/JMU-Autonomous-Vehicle-Controller.svg" alt="license">
