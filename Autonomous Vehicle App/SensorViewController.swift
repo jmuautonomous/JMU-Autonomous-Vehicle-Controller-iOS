@@ -27,9 +27,6 @@ class SensorViewController: UIViewController {
     @IBOutlet weak var statusSensor_05: UILabel!
     @IBOutlet weak var statusSensor_06: UILabel!
     
-    //the json file url
-    let mockApiURL = "https://d2d8164e-baeb-48cd-9f47-d974783abdc4.mock.pstmn.io/V1/";
-    
     //A string array to save all the names
     var nameArray = [String]()
     
@@ -56,7 +53,7 @@ class SensorViewController: UIViewController {
     //this function is fetching the json from URL
     @objc func getJsonFromUrl(){
         //creating a NSURL
-        let url = NSURL(string: mockApiURL + "sensors")
+        let url = NSURL(string: GoToViewController.ApiUrl.url + "cardata")
         
         if isInternetAvailable() == true {
             //fetching the data from the url
@@ -65,10 +62,10 @@ class SensorViewController: UIViewController {
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                     
                     //printing the json in console
-                    print(jsonObj!.value(forKey: "sensors")!)
+                    print(jsonObj!.value(forKey: "Cardata")!)
                     
                     //getting the avengers tag array from json and converting it to NSArray
-                    if let sensorsArray = jsonObj!.value(forKey: "sensors") as? NSArray {
+                    if let sensorsArray = jsonObj!.value(forKey: "Cardata") as? NSArray {
                         //let sensorValues = sensorsArray.value(forKeyPath: "value.name") as! NSArray
                         
                         //self.statusSensor_01?.text = sensorValues[0] as? String
@@ -104,12 +101,12 @@ class SensorViewController: UIViewController {
     
     //function to display sensor data
     func displaySensorData() {
-        self.statusSensor_01?.text = "37V"
-        self.statusSensor_02?.text = "Good"
-        self.statusSensor_03?.text = "Good"
-        self.statusSensor_04?.text = "Good"
-        self.statusSensor_05?.text = "Good"
-        self.statusSensor_06?.text = "Good"
+        self.statusSensor_01?.text = "0V"
+        self.statusSensor_02?.text = "38.4319133333, -78.87598"
+        self.statusSensor_03?.text = "No Data Yet"
+        self.statusSensor_04?.text = "No Data Yet"
+        self.statusSensor_05?.text = "No Data Yet"
+        self.statusSensor_06?.text = "No Data Yet"
     }
     
     func isInternetAvailable() -> Bool

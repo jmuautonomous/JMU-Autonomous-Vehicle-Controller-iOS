@@ -13,9 +13,9 @@ class GoToViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem?
     
-    //the json file url
+    //setting the global url variable
     struct ApiUrl {
-        static var url = "http://10.0.0.218:8080/";
+        static var url = "http://134.126.153.21:5000/";
     }
     
     //A string array to save all the names
@@ -116,6 +116,8 @@ class GoToViewController: UIViewController {
             self.present(alert, animated: true)
         }
     }
+    
+    //checking to see if internet connection is available to prevent crashing
     func isInternetAvailable() -> Bool
     {
         var zeroAddress = sockaddr_in()
@@ -140,6 +142,7 @@ class GoToViewController: UIViewController {
         
     }
     
+    //function to alert user if no internet connection available
     func isConnected() {
         if isInternetAvailable() != true {
             let alert = UIAlertController(title: "No Internet Connection", message: "You are not connected to the internet", preferredStyle: .alert)
