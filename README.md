@@ -22,5 +22,7 @@ A mobile application used to monitor James Madison University's autonomous vehic
 3) Press the 'play' button or use the hotkeys ```⌘R``` to run the app
 <p align="center">
 	<img src="https://raw.githubusercontent.com/jmuautonomous/JMU-Autonomous-Vehicle-Controller-iOS/master/iOS01.png" width="200px">
-<img src="https://raw.githubusercontent.com/jmuautonomous/JMU-Autonomous-Vehicle-Controller-iOS/master/iOS02.png" width="200px">
+	<img src="https://raw.githubusercontent.com/jmuautonomous/JMU-Autonomous-Vehicle-Controller-iOS/master/iOS02.png" width="200px">
+	<img src="https://raw.githubusercontent.com/jmuautonomous/JMU-Autonomous-Vehicle-Controller-iOS/master/iOS04.png" width="200px">
+	<img src="https://raw.githubusercontent.com/jmuautonomous/JMU-Autonomous-Vehicle-Controller-iOS/master/iOS03.png" width="200px">
 </p>
